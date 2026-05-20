@@ -7,7 +7,7 @@ const LAUNCH_BOOST = 1.5
 
 const LAUNCH_FRICTION: = 0.99
 const START_FRICTION: = 0.70
-const ELASTICITY: float = 0.70
+const ELASTICITY: float = 0.85
 
 var launched: bool = false
 var just_launched: bool = false
