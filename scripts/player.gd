@@ -3,8 +3,10 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+const LAUNCH_BOOST = 1.5
 
 var launched: bool = false
+var just_launched: bool = false
 
 func _ready() -> void:
 	print("player is ready")
@@ -17,7 +19,10 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor() and launched:
 		velocity += get_gravity() * delta
 	
-	
+	if just_launched:
+		velocity.x *= LAUNCH_BOOST
+		just_launched = false
+
 	# NOTICE JUMPING
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -28,7 +33,7 @@ func _physics_process(delta: float) -> void:
 	if direction and not launched:
 		velocity.x = direction * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, velocity.x * 0.9, SPEED)
+		velocity.x = move_toward(velocity.x, velocity.x * 0.99, SPEED)
 	
 	var collision = move_and_collide(velocity * delta)
 
@@ -42,3 +47,5 @@ func _physics_process(delta: float) -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("LAUNCH"):
 		launched = true
+		just_launched = true
+		

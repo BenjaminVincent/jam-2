@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://w3dlyvsfupig"]
 
 [ext_resource type="Script" uid="uid://hxq4slg6yl3x" path="res://scripts/game.gd" id="1_uwrxv"]
-[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_yqjtg"]
-[ext_resource type="PackedScene" path="res://scenes/boundary.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cpsk4h6cmib0x" path="res://scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://drelbun12h8vq" path="res://scenes/boundary.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D" unique_id=1624841179]
 script = ExtResource("1_uwrxv")
