@@ -8,6 +8,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1150502816]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(6.738305e-07, 0.40701604, 0.40718302, 1)
+
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=105060602]
 layout_mode = 1
 anchors_preset = 8
