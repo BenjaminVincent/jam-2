@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://w3dlyvsfupig"]
 
+[ext_resource type="Script" uid="uid://hxq4slg6yl3x" path="res://scenes/game.gd" id="1_uwrxv"]
+
 [node name="Game" type="Control" unique_id=1837819744]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uwrxv")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1150502816]
 layout_mode = 0
@@ -32,3 +35,5 @@ bbcode_enabled = true
 text = "[wave]Game Screen[/wave]"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
