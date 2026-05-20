@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://w3dlyvsfupig"]
 
 [ext_resource type="Script" uid="uid://hxq4slg6yl3x" path="res://scripts/game.gd" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://cpsk4h6cmib0x" path="res://scenes/player.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D" unique_id=1624841179]
 script = ExtResource("1_uwrxv")
@@ -15,3 +16,5 @@ offset_left = 426.0
 offset_right = 852.0
 offset_bottom = 720.0
 color = Color(0.5186603, 0.1540255, 0, 1)
+
+[node name="Player" parent="." unique_id=1140346773 instance=ExtResource("2_yqjtg")]
