@@ -5,6 +5,10 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const LAUNCH_BOOST = 1.5
 
+const LAUNCH_FRICTION: = 0.99
+const START_FRICTION: = 0.70
+const ELASTICITY: float = 0.70
+
 var launched: bool = false
 var just_launched: bool = false
 
@@ -34,16 +38,16 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		if launched:
-			velocity.x = move_toward(velocity.x, velocity.x * 0.99, SPEED)
+			velocity.x = move_toward(velocity.x, velocity.x * LAUNCH_FRICTION, SPEED)
 		else:
-			velocity.x = move_toward(velocity.x, velocity.x * 0.9, SPEED)
+			velocity.x = move_toward(velocity.x, velocity.x * START_FRICTION, SPEED)
 	
 	var collision = move_and_collide(velocity * delta)
 
 	# NOTICE BOUNCING
 	if collision and launched:
 		velocity = velocity.bounce(collision.get_normal())
-		velocity = Vector2(velocity.x * 0.75, velocity.y * 0.75)
+		velocity = Vector2(velocity.x * ELASTICITY, velocity.y * ELASTICITY)
 
 
 
