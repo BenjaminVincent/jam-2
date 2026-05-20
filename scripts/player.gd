@@ -41,7 +41,7 @@ func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta)
 
 	# NOTICE BOUNCING
-	if collision:
+	if collision and launched:
 		velocity = velocity.bounce(collision.get_normal())
 		velocity = Vector2(velocity.x * 0.75, velocity.y * 0.75)
 
