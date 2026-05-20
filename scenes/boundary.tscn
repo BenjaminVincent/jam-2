@@ -2,7 +2,7 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o0ibr"]
 
-[node name="Node2D" type="StaticBody2D" unique_id=2131543913]
+[node name="Boundary" type="StaticBody2D" unique_id=2131543913]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1304965326]
 shape = SubResource("WorldBoundaryShape2D_o0ibr")
