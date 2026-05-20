@@ -9,6 +9,8 @@ const LAUNCH_FRICTION: = 0.99
 const START_FRICTION: = 0.70
 const ELASTICITY: float = 0.85
 
+const GRAVITY: Vector2 = Vector2(0.0, 2100.0)
+
 var launched: bool = false
 var just_launched: bool = false
 
@@ -24,17 +26,15 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 
-	if not is_on_floor() and launched:
-		velocity += get_gravity() * delta
+	if launched:
+		velocity += GRAVITY * delta
 	
 	if just_launched:
 		velocity.x *= LAUNCH_BOOST
 		just_launched = false
 		allow_input = false
 
-	# NOTICE JUMPING
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+
 	
 	# NOTICE MOVING 
 	var direction := Input.get_axis("ui_left", "ui_right")
