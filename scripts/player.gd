@@ -33,7 +33,10 @@ func _physics_process(delta: float) -> void:
 	if direction and not launched:
 		velocity.x = direction * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, velocity.x * 0.99, SPEED)
+		if launched:
+			velocity.x = move_toward(velocity.x, velocity.x * 0.99, SPEED)
+		else:
+			velocity.x = move_toward(velocity.x, velocity.x * 0.9, SPEED)
 	
 	var collision = move_and_collide(velocity * delta)
 
