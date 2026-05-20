@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://81jepktn8q38" path="res://assets/ball.png" id="1_wtcfe"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
-radius = 32.0
+radius = 16.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1140346773]
 
