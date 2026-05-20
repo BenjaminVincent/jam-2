@@ -12,6 +12,10 @@ const ELASTICITY: float = 0.70
 var launched: bool = false
 var just_launched: bool = false
 
+var allow_input = true
+
+
+
 func _ready() -> void:
 	print("player is ready")
 	position.x = get_viewport_rect().size.x / 2.0
@@ -26,6 +30,7 @@ func _physics_process(delta: float) -> void:
 	if just_launched:
 		velocity.x *= LAUNCH_BOOST
 		just_launched = false
+		allow_input = false
 
 	# NOTICE JUMPING
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -52,7 +57,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("LAUNCH"):
+	if Input.is_action_just_pressed("LAUNCH") and allow_input:
 		launched = true
 		just_launched = true
 		
