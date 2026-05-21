@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://hxq4slg6yl3x" path="res://scripts/game.gd" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cpsk4h6cmib0x" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://drelbun12h8vq" path="res://scenes/boundary.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bvac1o2r7jw50" path="res://scenes/basic_collider.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://c17cwqe5mosab" path="res://scenes/vertical_collider.tscn" id="5_iywne"]
 
 [node name="Game" type="Node2D" unique_id=1624841179]
 script = ExtResource("1_uwrxv")
@@ -30,3 +32,54 @@ rotation = -1.5707964
 
 [node name="BoundaryFloor" parent="." unique_id=151637124 instance=ExtResource("3_lnu2h")]
 position = Vector2(0, 720)
+
+[node name="BasicCollider" parent="." unique_id=74425848 instance=ExtResource("4_lbhrr")]
+position = Vector2(488, 288)
+
+[node name="BasicCollider2" parent="." unique_id=1382130259 instance=ExtResource("4_lbhrr")]
+position = Vector2(672, 288)
+
+[node name="BasicCollider3" parent="." unique_id=650336844 instance=ExtResource("4_lbhrr")]
+position = Vector2(608, 288)
+
+[node name="BasicCollider4" parent="." unique_id=1791078316 instance=ExtResource("4_lbhrr")]
+position = Vector2(544, 288)
+
+[node name="BasicCollider5" parent="." unique_id=1218793908 instance=ExtResource("4_lbhrr")]
+position = Vector2(544, 288)
+
+[node name="BasicCollider6" parent="." unique_id=1894079026 instance=ExtResource("4_lbhrr")]
+position = Vector2(758, 401)
+
+[node name="BasicCollider7" parent="." unique_id=1933075453 instance=ExtResource("4_lbhrr")]
+position = Vector2(792, 560)
+
+[node name="BasicCollider8" parent="." unique_id=159349943 instance=ExtResource("4_lbhrr")]
+position = Vector2(664, 576)
+
+[node name="BasicCollider9" parent="." unique_id=1012687175 instance=ExtResource("4_lbhrr")]
+position = Vector2(512, 568)
+
+[node name="VerticalCollider" parent="." unique_id=1654998296 instance=ExtResource("5_iywne")]
+position = Vector2(424, 656)
+
+[node name="VerticalCollider2" parent="." unique_id=1694301877 instance=ExtResource("5_iywne")]
+position = Vector2(504, 656)
+
+[node name="VerticalCollider3" parent="." unique_id=819927749 instance=ExtResource("5_iywne")]
+position = Vector2(504, 656)
+
+[node name="VerticalCollider4" parent="." unique_id=318358019 instance=ExtResource("5_iywne")]
+position = Vector2(632, 656)
+
+[node name="VerticalCollider5" parent="." unique_id=1916875499 instance=ExtResource("5_iywne")]
+position = Vector2(696, 656)
+
+[node name="VerticalCollider6" parent="." unique_id=1968244466 instance=ExtResource("5_iywne")]
+position = Vector2(568, 656)
+
+[node name="VerticalCollider7" parent="." unique_id=1234637045 instance=ExtResource("5_iywne")]
+position = Vector2(760, 656)
+
+[node name="VerticalCollider8" parent="." unique_id=1027749603 instance=ExtResource("5_iywne")]
+position = Vector2(844, 656)
