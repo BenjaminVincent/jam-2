@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://3gi7cmkfmv03"]
+
+[ext_resource type="PackedScene" path="res://scenes/vertical_collider.tscn" id="1_ua7c8"]
+[ext_resource type="PackedScene" uid="uid://drelbun12h8vq" path="res://scenes/boundary.tscn" id="2_1al85"]
+
+[node name="BoardStandard" type="Node2D" unique_id=1585537679]
+
+[node name="BoardBackground" type="ColorRect" parent="." unique_id=1078716353]
+offset_right = 400.0
+offset_bottom = 720.0
+color = Color(0.5186603, 0.1540255, 0, 1)
+
+[node name="VerticalColliders" type="Node2D" parent="." unique_id=625657348]
+position = Vector2(8, 656)
+
+[node name="VerticalCollider1" parent="VerticalColliders" unique_id=1654998296 instance=ExtResource("1_ua7c8")]
+position = Vector2(-8, 0)
+
+[node name="VerticalCollider2" parent="VerticalColliders" unique_id=634700093 instance=ExtResource("1_ua7c8")]
+position = Vector2(48, 0)
+
+[node name="VerticalCollider3" parent="VerticalColliders" unique_id=1998931288 instance=ExtResource("1_ua7c8")]
+position = Vector2(104, 0)
+
+[node name="VerticalCollider4" parent="VerticalColliders" unique_id=681333353 instance=ExtResource("1_ua7c8")]
+position = Vector2(160, 0)
+
+[node name="VerticalCollider5" parent="VerticalColliders" unique_id=24806722 instance=ExtResource("1_ua7c8")]
+position = Vector2(216, 0)
+
+[node name="VerticalCollider6" parent="VerticalColliders" unique_id=1143231159 instance=ExtResource("1_ua7c8")]
+position = Vector2(272, 0)
+
+[node name="VerticalCollider7" parent="VerticalColliders" unique_id=1917483017 instance=ExtResource("1_ua7c8")]
+position = Vector2(328, 0)
+
+[node name="VerticalCollider8" parent="VerticalColliders" unique_id=1440174939 instance=ExtResource("1_ua7c8")]
+position = Vector2(384, 0)
+
+[node name="Boundaries" type="Node2D" parent="." unique_id=393506370]
+
+[node name="BoundaryLeft" parent="Boundaries" unique_id=2131543913 instance=ExtResource("2_1al85")]
+rotation = 1.5707964
+
+[node name="BoundaryRight" parent="Boundaries" unique_id=873688576 instance=ExtResource("2_1al85")]
+position = Vector2(400, 0)
+rotation = -1.5707964
+
+[node name="BoundaryFloor" parent="Boundaries" unique_id=2014993203 instance=ExtResource("2_1al85")]
+position = Vector2(0, 720)
+
+[node name="BoundaryCeling" parent="Boundaries" unique_id=1715390714 instance=ExtResource("2_1al85")]
+rotation = 3.1415927
