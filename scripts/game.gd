@@ -12,15 +12,35 @@ func _process(_delta: float) -> void:
 
 
 func _ready() -> void:
-	match GameState.current_level:
-		1:
-			print("loading level: ", GameState.current_level)
-			current_level.add_child(load("res://scenes/level_default.tscn").instantiate())
-		2:
-			pass
-		3:
-			pass
-		4:
-			pass
-		5:
-			pass
+	_load_level()
+
+
+
+func _on_button_pressed(source: BaseButton) -> void:
+	
+	if "1" in source.name:
+		GameState.current_level = 1
+	elif "2" in source.name:
+		GameState.current_level = 2
+	elif "3" in source.name:
+		GameState.current_level = 3
+	else:
+		print("level not found")
+	
+	_load_level(GameState.current_level)
+
+
+func _load_level(_current_level = null) -> void:
+	
+	for child in current_level.get_children():
+		child.queue_free()
+	
+	var level_path = ("res://scenes/level_" + str(_current_level) + ".tscn")
+	var level
+	if ResourceLoader.exists(level_path):
+		level = load(level_path)
+	else:
+		level = load("res://scenes/level_default.tscn")
+		
+	
+	current_level.add_child(level.instantiate())

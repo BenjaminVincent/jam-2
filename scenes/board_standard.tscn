@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4dcuxgl37rcj"]
 
-[ext_resource type="PackedScene" path="res://scenes/vertical_collider.tscn" id="1_ua7c8"]
+[ext_resource type="PackedScene" uid="uid://c17cwqe5mosab" path="res://scenes/vertical_collider.tscn" id="1_ua7c8"]
 [ext_resource type="PackedScene" uid="uid://drelbun12h8vq" path="res://scenes/boundary.tscn" id="2_1al85"]
 
 [node name="BoardStandard" type="Node2D" unique_id=1585537679]
