@@ -1,4 +1,5 @@
 extends Node2D
+@onready var current_level: Node2D = $CurrentLevel
 
 
 func _process(_delta: float) -> void:
@@ -11,5 +12,15 @@ func _process(_delta: float) -> void:
 
 
 func _ready() -> void:
-	print("loading current_level...")
-	
+	match GameState.current_level:
+		1:
+			print("loading level: ", GameState.current_level)
+			current_level.add_child(load("res://scenes/board_standard.tscn").instantiate())
+		2:
+			pass
+		3:
+			pass
+		4:
+			pass
+		5:
+			pass
