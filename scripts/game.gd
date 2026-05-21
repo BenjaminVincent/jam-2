@@ -1,5 +1,7 @@
 extends Node2D
 @onready var current_level: Node2D = $CurrentLevel
+@onready var score: RichTextLabel = $CanvasLayer/Score
+
 
 
 func _process(_delta: float) -> void:
@@ -13,6 +15,7 @@ func _process(_delta: float) -> void:
 
 func _ready() -> void:
 	_load_level()
+	GameState.update_score.connect(_on_update_score)
 
 
 
@@ -30,6 +33,7 @@ func _on_button_pressed(source: BaseButton) -> void:
 	_load_level(GameState.current_level)
 
 
+
 func _load_level(_current_level = null) -> void:
 	
 	for child in current_level.get_children():
@@ -41,6 +45,9 @@ func _load_level(_current_level = null) -> void:
 		level = load(level_path)
 	else:
 		level = load("res://scenes/level_default.tscn")
-		
 	
 	current_level.add_child(level.instantiate())
+
+
+func _on_update_score() -> void:
+	score.text = "SCORE: " + str(GameState.score)

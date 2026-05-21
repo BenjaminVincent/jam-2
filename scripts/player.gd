@@ -19,7 +19,6 @@ var allow_input = true
 
 
 func _ready() -> void:
-	print("player is ready")
 	position.x = get_viewport_rect().size.x / 2.0
 
 
@@ -56,9 +55,12 @@ func _physics_process(delta: float) -> void:
 		if collision.get_collider().has_meta("type") and collision.get_collider().get_meta("type") == "collider":
 			var other = collision.get_collider()
 			other._on_hit()
-			
-	if Input.is_action_just_pressed("RESET"):
+		
+		
+	if Input.is_action_just_pressed("RESET_BALL"):
 		_reset_ball()
+	if Input.is_action_just_pressed("RESET_GAME"):
+		GameState._reset_game()
 
 
 
