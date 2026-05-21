@@ -15,7 +15,7 @@ func _ready() -> void:
 	match GameState.current_level:
 		1:
 			print("loading level: ", GameState.current_level)
-			current_level.add_child(load("res://scenes/board_standard.tscn").instantiate())
+			current_level.add_child(load("res://scenes/level_default.tscn").instantiate())
 		2:
 			pass
 		3:

@@ -11,13 +11,6 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(6.738305e-07, 0.40701604, 0.40718302, 1)
 
-[node name="BoardBackground" type="ColorRect" parent="." unique_id=1475131142]
-visible = false
-offset_left = 440.0
-offset_right = 840.0
-offset_bottom = 720.0
-color = Color(0.5186603, 0.1540255, 0, 1)
-
 [node name="CurrentLevel" type="Node2D" parent="." unique_id=1676688763]
 
 [node name="Player" parent="." unique_id=1140346773 instance=ExtResource("2_yqjtg")]
