@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://hxq4slg6yl3x" path="res://scripts/game.gd" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cpsk4h6cmib0x" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://drelbun12h8vq" path="res://scenes/boundary.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://bvac1o2r7jw50" path="res://scenes/basic_collider.tscn" id="4_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://c17cwqe5mosab" path="res://scenes/vertical_collider.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" path="res://scenes/basic_collider.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" path="res://scenes/vertical_collider.tscn" id="5_iywne"]
 
 [node name="Game" type="Node2D" unique_id=1624841179]
 script = ExtResource("1_uwrxv")
@@ -15,19 +15,19 @@ offset_bottom = 720.0
 color = Color(6.738305e-07, 0.40701604, 0.40718302, 1)
 
 [node name="BoardBackground" type="ColorRect" parent="." unique_id=1475131142]
-offset_left = 426.0
-offset_right = 852.0
+offset_left = 440.0
+offset_right = 840.0
 offset_bottom = 720.0
 color = Color(0.5186603, 0.1540255, 0, 1)
 
 [node name="Player" parent="." unique_id=1140346773 instance=ExtResource("2_yqjtg")]
 
 [node name="BoundaryLeft" parent="." unique_id=2131543913 instance=ExtResource("3_lnu2h")]
-position = Vector2(426, 0)
+position = Vector2(440, 0)
 rotation = 1.5707964
 
 [node name="BoundaryRight" parent="." unique_id=785699623 instance=ExtResource("3_lnu2h")]
-position = Vector2(852, 0)
+position = Vector2(840, 0)
 rotation = -1.5707964
 
 [node name="BoundaryFloor" parent="." unique_id=151637124 instance=ExtResource("3_lnu2h")]
@@ -61,25 +61,25 @@ position = Vector2(664, 576)
 position = Vector2(512, 568)
 
 [node name="VerticalCollider" parent="." unique_id=1654998296 instance=ExtResource("5_iywne")]
-position = Vector2(424, 656)
+position = Vector2(440, 656)
 
 [node name="VerticalCollider2" parent="." unique_id=1694301877 instance=ExtResource("5_iywne")]
-position = Vector2(504, 656)
+position = Vector2(552, 656)
 
 [node name="VerticalCollider3" parent="." unique_id=819927749 instance=ExtResource("5_iywne")]
-position = Vector2(504, 656)
+position = Vector2(496, 656)
 
 [node name="VerticalCollider4" parent="." unique_id=318358019 instance=ExtResource("5_iywne")]
-position = Vector2(632, 656)
+position = Vector2(664, 656)
 
 [node name="VerticalCollider5" parent="." unique_id=1916875499 instance=ExtResource("5_iywne")]
-position = Vector2(696, 656)
+position = Vector2(720, 656)
 
 [node name="VerticalCollider6" parent="." unique_id=1968244466 instance=ExtResource("5_iywne")]
-position = Vector2(568, 656)
+position = Vector2(608, 656)
 
 [node name="VerticalCollider7" parent="." unique_id=1234637045 instance=ExtResource("5_iywne")]
-position = Vector2(760, 656)
+position = Vector2(776, 656)
 
 [node name="VerticalCollider8" parent="." unique_id=1027749603 instance=ExtResource("5_iywne")]
-position = Vector2(844, 656)
+position = Vector2(832, 656)
