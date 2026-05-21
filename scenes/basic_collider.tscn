@@ -23,3 +23,4 @@ shape = SubResource("CircleShape2D_drlob")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1063127770]
 stream = SubResource("AudioStreamRandomizer_lc0p8")
+volume_db = -7.0
