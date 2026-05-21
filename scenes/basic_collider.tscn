@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://bvac1o2r7jw50"]
 
 [ext_resource type="Texture2D" uid="uid://6abll1k7qcrn" path="res://assets/peg.png" id="1_drlob"]
-[ext_resource type="Script" path="res://scripts/basic_collider.gd" id="1_s8tcg"]
+[ext_resource type="Script" uid="uid://b7nc4l4pnwc5m" path="res://scripts/basic_collider.gd" id="1_s8tcg"]
+[ext_resource type="AudioStream" uid="uid://dqcptmc27l3vr" path="res://audio/basic_collider_sound.mp3" id="3_taym3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_drlob"]
 radius = 15.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lc0p8"]
+random_pitch = 1.2599211
+streams_count = 1
+stream_0/stream = ExtResource("3_taym3")
 
 [node name="BasicCollider" type="StaticBody2D" unique_id=74425848]
 script = ExtResource("1_s8tcg")
@@ -14,3 +20,6 @@ texture = ExtResource("1_drlob")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=478141526]
 shape = SubResource("CircleShape2D_drlob")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1063127770]
+stream = SubResource("AudioStreamRandomizer_lc0p8")

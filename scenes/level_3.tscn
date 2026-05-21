@@ -46,10 +46,10 @@ position = Vector2(480, 440)
 position = Vector2(520, 544)
 
 [node name="BasicCollider22" parent="Colliders" unique_id=1636184470 instance=ExtResource("2_uwxec")]
-position = Vector2(665, 592)
+position = Vector2(680, 576)
 
 [node name="BasicCollider21" parent="Colliders" unique_id=1650984560 instance=ExtResource("2_uwxec")]
-position = Vector2(600, 600)
+position = Vector2(584, 584)
 
 [node name="BasicCollider23" parent="Colliders" unique_id=1707781808 instance=ExtResource("2_uwxec")]
 position = Vector2(680, 504)
