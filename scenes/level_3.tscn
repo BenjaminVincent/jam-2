@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://gtny2ou4wwfp"]
+
+[ext_resource type="PackedScene" uid="uid://b4dcuxgl37rcj" path="res://scenes/board_standard.tscn" id="1_o05i4"]
+[ext_resource type="PackedScene" uid="uid://bvac1o2r7jw50" path="res://scenes/basic_collider.tscn" id="2_0xx7t"]
+
+[node name="LevelJustin" type="Node2D" unique_id=438883644]
+
+[node name="BoardStandard" parent="." unique_id=1585537679 instance=ExtResource("1_o05i4")]
+
+[node name="Colliders" type="Node2D" parent="." unique_id=1439849856]
+
+[node name="BasicCollider" parent="Colliders" unique_id=74425848 instance=ExtResource("2_0xx7t")]
+position = Vector2(520, 400)
+
+[node name="BasicCollider2" parent="Colliders" unique_id=268174650 instance=ExtResource("2_0xx7t")]
+position = Vector2(561, 272)
+
+[node name="BasicCollider3" parent="Colliders" unique_id=1425729900 instance=ExtResource("2_0xx7t")]
+position = Vector2(720, 304)
+
+[node name="BasicCollider4" parent="Colliders" unique_id=166848228 instance=ExtResource("2_0xx7t")]
+position = Vector2(680, 424)
+
+[node name="BasicCollider5" parent="Colliders" unique_id=675222959 instance=ExtResource("2_0xx7t")]
+position = Vector2(665, 272)
