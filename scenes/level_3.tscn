@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://gtny2ou4wwfp"]
+
+[ext_resource type="PackedScene" uid="uid://b4dcuxgl37rcj" path="res://scenes/board_standard.tscn" id="1_h23n6"]
+[ext_resource type="PackedScene" uid="uid://bvac1o2r7jw50" path="res://scenes/basic_collider.tscn" id="2_uwxec"]
+
+[node name="Level3" type="Node2D" unique_id=438883644]
+
+[node name="BoardStandard" parent="." unique_id=1585537679 instance=ExtResource("1_h23n6")]
+
+[node name="Colliders" type="Node2D" parent="." unique_id=1439849856]
+
+[node name="BasicCollider" parent="Colliders" unique_id=74425848 instance=ExtResource("2_uwxec")]
+position = Vector2(680, 312)
+
+[node name="BasicCollider2" parent="Colliders" unique_id=268174650 instance=ExtResource("2_uwxec")]
+position = Vector2(552, 144)
+
+[node name="BasicCollider3" parent="Colliders" unique_id=1425729900 instance=ExtResource("2_uwxec")]
+position = Vector2(656, 328)
+
+[node name="BasicCollider11" parent="Colliders" unique_id=1744187128 instance=ExtResource("2_uwxec")]
+position = Vector2(561, 360)
+
+[node name="BasicCollider12" parent="Colliders" unique_id=1941716188 instance=ExtResource("2_uwxec")]
+position = Vector2(584, 376)
+
+[node name="BasicCollider13" parent="Colliders" unique_id=897544365 instance=ExtResource("2_uwxec")]
+position = Vector2(609, 392)
+
+[node name="BasicCollider14" parent="Colliders" unique_id=67863067 instance=ExtResource("2_uwxec")]
+position = Vector2(816, 344)
+
+[node name="BasicCollider16" parent="Colliders" unique_id=521838855 instance=ExtResource("2_uwxec")]
+position = Vector2(768, 384)
+
+[node name="BasicCollider17" parent="Colliders" unique_id=1501320153 instance=ExtResource("2_uwxec")]
+position = Vector2(520, 456)
+
+[node name="BasicCollider18" parent="Colliders" unique_id=936991572 instance=ExtResource("2_uwxec")]
+position = Vector2(592, 512)
+
+[node name="BasicCollider19" parent="Colliders" unique_id=1396590005 instance=ExtResource("2_uwxec")]
+position = Vector2(480, 440)
+
+[node name="BasicCollider20" parent="Colliders" unique_id=65844169 instance=ExtResource("2_uwxec")]
+position = Vector2(520, 544)
+
+[node name="BasicCollider22" parent="Colliders" unique_id=1636184470 instance=ExtResource("2_uwxec")]
+position = Vector2(665, 592)
+
+[node name="BasicCollider21" parent="Colliders" unique_id=1650984560 instance=ExtResource("2_uwxec")]
+position = Vector2(600, 600)
+
+[node name="BasicCollider23" parent="Colliders" unique_id=1707781808 instance=ExtResource("2_uwxec")]
+position = Vector2(680, 504)
+
+[node name="BasicCollider24" parent="Colliders" unique_id=1418728258 instance=ExtResource("2_uwxec")]
+position = Vector2(713, 440)
+
+[node name="BasicCollider25" parent="Colliders" unique_id=731960811 instance=ExtResource("2_uwxec")]
+position = Vector2(816, 616)
+
+[node name="BasicCollider15" parent="Colliders" unique_id=310948908 instance=ExtResource("2_uwxec")]
+position = Vector2(464, 376)
+
+[node name="BasicCollider7" parent="Colliders" unique_id=39187386 instance=ExtResource("2_uwxec")]
+position = Vector2(528, 120)
+
+[node name="BasicCollider4" parent="Colliders" unique_id=166848228 instance=ExtResource("2_uwxec")]
+position = Vector2(704, 296)
+
+[node name="BasicCollider6" parent="Colliders" unique_id=1590237452 instance=ExtResource("2_uwxec")]
+position = Vector2(681, 128)
+
+[node name="BasicCollider8" parent="Colliders" unique_id=1498583003 instance=ExtResource("2_uwxec")]
+position = Vector2(720, 80)
+
+[node name="BasicCollider9" parent="Colliders" unique_id=1035369814 instance=ExtResource("2_uwxec")]
+position = Vector2(696, 104)
+
+[node name="BasicCollider10" parent="Colliders" unique_id=420719578 instance=ExtResource("2_uwxec")]
+position = Vector2(729, 280)
+
+[node name="BasicCollider5" parent="Colliders" unique_id=675222959 instance=ExtResource("2_uwxec")]
+position = Vector2(576, 160)
