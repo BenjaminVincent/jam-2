@@ -49,9 +49,14 @@ func _physics_process(delta: float) -> void:
 
 	# NOTICE BOUNCING
 	if collision and launched:
+
 		velocity = velocity.bounce(collision.get_normal())
 		velocity = Vector2(velocity.x * ELASTICITY, velocity.y * ELASTICITY)
-	
+
+		if collision.get_collider().has_meta("type") and collision.get_collider().get_meta("type") == "collider":
+			var other = collision.get_collider()
+			other._on_hit()
+			
 	if Input.is_action_just_pressed("RESET"):
 		_reset_ball()
 
