@@ -34,8 +34,6 @@ func _physics_process(delta: float) -> void:
 		just_launched = false
 		allow_input = false
 
-
-	
 	# NOTICE MOVING 
 	var direction := Input.get_axis("ui_left", "ui_right")
 	
@@ -53,6 +51,9 @@ func _physics_process(delta: float) -> void:
 	if collision and launched:
 		velocity = velocity.bounce(collision.get_normal())
 		velocity = Vector2(velocity.x * ELASTICITY, velocity.y * ELASTICITY)
+	
+	if Input.is_action_just_pressed("RESET"):
+		_reset_ball()
 
 
 
@@ -60,4 +61,12 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("LAUNCH") and allow_input:
 		launched = true
 		just_launched = true
-		
+
+
+
+func _reset_ball() -> void:
+	position = Vector2(get_viewport_rect().size.x / 2.0, 0.0)
+	velocity = Vector2(0.0, 0.0)
+	launched = false
+	just_launched = false
+	allow_input = true
