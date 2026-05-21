@@ -23,11 +23,11 @@ color = Color(0.5186603, 0.1540255, 0, 1)
 [node name="Player" parent="." unique_id=1140346773 instance=ExtResource("2_yqjtg")]
 
 [node name="BoundaryLeft" parent="." unique_id=2131543913 instance=ExtResource("3_lnu2h")]
-position = Vector2(426, 0)
+position = Vector2(440, 0)
 rotation = 1.5707964
 
 [node name="BoundaryRight" parent="." unique_id=785699623 instance=ExtResource("3_lnu2h")]
-position = Vector2(852, 0)
+position = Vector2(840, 0)
 rotation = -1.5707964
 
 [node name="BoundaryFloor" parent="." unique_id=151637124 instance=ExtResource("3_lnu2h")]
