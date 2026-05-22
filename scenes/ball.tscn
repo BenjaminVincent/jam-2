@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cfyer18xgce5o"]
+
+[ext_resource type="Texture2D" uid="uid://81jepktn8q38" path="res://assets/ball.png" id="1_7s4qf"]
+[ext_resource type="Script" uid="uid://bh858xkttl5bg" path="res://scripts/ball.gd" id="1_cxlvu"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7s4qf"]
+bounce = 0.8
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cxlvu"]
+radius = 16.0
+
+[node name="Ball" type="RigidBody2D" unique_id=1405164317]
+mass = 20.0
+physics_material_override = SubResource("PhysicsMaterial_7s4qf")
+script = ExtResource("1_cxlvu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=122299904]
+texture = ExtResource("1_7s4qf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1423390262]
+shape = SubResource("CircleShape2D_cxlvu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="sleeping_state_changed" from="." to="." method="_on_sleeping_state_changed"]

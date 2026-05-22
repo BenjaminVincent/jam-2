@@ -7,6 +7,7 @@ size = Vector2(48, 0)
 
 [node name="Bin" type="StaticBody2D" unique_id=2021428844]
 script = ExtResource("1_yq3hu")
+metadata/type = "bin"
 
 [node name="DebugTexture" type="ColorRect" parent="." unique_id=1624745263]
 visible = false
@@ -21,7 +22,7 @@ shape = SubResource("RectangleShape2D_13hj8")
 [node name="ScoreLabel" type="RichTextLabel" parent="." unique_id=1915586471]
 offset_right = 48.0
 offset_bottom = 56.0
-text = "10"
+text = "5"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -15,10 +15,10 @@ func add_to_score(points) -> void:
 
 func _reset_game() -> void:
 	
-	var player = get_node_or_null("/root/Game/Player")
+	var ball = get_node_or_null("/root/Game/Ball")
 	
-	if player:
-		player._reset_ball()
+	if ball:
+		ball._reset_ball()
 		GameState.score = 0
 		emit_signal("update_score")
 	else:
