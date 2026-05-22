@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dngh1gruvlgcl"]
+[gd_scene format=4 uid="uid://bvac1o2r7jw50"]
 
 [ext_resource type="Texture2D" uid="uid://6abll1k7qcrn" path="res://assets/peg.png" id="1_drlob"]
 [ext_resource type="Script" uid="uid://b7nc4l4pnwc5m" path="res://scripts/basic_collider.gd" id="1_s8tcg"]
