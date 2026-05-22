@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	# NOTICE MOVING 
 	var direction := Input.get_axis("ui_left", "ui_right")
 	
-	if direction and not launched:
+	if direction and not launched and allow_input:
 		velocity.x = direction * SPEED
 	else:
 		if launched:
