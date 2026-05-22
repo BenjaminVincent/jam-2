@@ -23,3 +23,8 @@ func _reset_game() -> void:
 		emit_signal("update_score")
 	else:
 		push_error("Player was not found, unable to reset game")
+
+
+
+func _round_over() -> void:
+	pass
