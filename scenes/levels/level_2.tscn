@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b4dcuxgl37rcj" path="res://scenes/board_standard.tscn" id="1_ra442"]
 [ext_resource type="PackedScene" uid="uid://bvac1o2r7jw50" path="res://scenes/basic_collider.tscn" id="2_fiq81"]
+[ext_resource type="PackedScene" uid="uid://c17cwqe5mosab" path="res://scenes/vertical_collider.tscn" id="2_l37oo"]
 [ext_resource type="PackedScene" uid="uid://brpabx6vkfywx" path="res://scenes/bin.tscn" id="3_l37oo"]
 
 [node name="LevelDefault" type="Node2D" unique_id=2139533695]
@@ -9,6 +10,10 @@
 [node name="BoardStandard" parent="." unique_id=1585537679 instance=ExtResource("1_ra442")]
 
 [node name="Colliders" type="Node2D" parent="." unique_id=420592813]
+
+[node name="VerticalCollider" parent="Colliders" unique_id=1654998296 instance=ExtResource("2_l37oo")]
+position = Vector2(632, 368)
+rotation = 0.9669124
 
 [node name="BasicCollider" parent="Colliders" unique_id=74425848 instance=ExtResource("2_fiq81")]
 position = Vector2(552, 296)
@@ -34,23 +39,30 @@ position = Vector2(441, 0)
 [node name="Bin1" parent="Bins" unique_id=2021428844 instance=ExtResource("3_l37oo")]
 position = Vector2(8, 664)
 point_value = 10
+metadata/type = "bin"
 
 [node name="Bin2" parent="Bins" unique_id=1961651438 instance=ExtResource("3_l37oo")]
 position = Vector2(64, 664)
 point_value = 20
+metadata/type = "bin"
 
 [node name="Bin3" parent="Bins" unique_id=1577844568 instance=ExtResource("3_l37oo")]
 position = Vector2(120, 664)
+metadata/type = "bin"
 
 [node name="Bin4" parent="Bins" unique_id=460633273 instance=ExtResource("3_l37oo")]
 position = Vector2(176, 664)
 point_value = 100
+metadata/type = "bin"
 
 [node name="Bin5" parent="Bins" unique_id=948565940 instance=ExtResource("3_l37oo")]
 position = Vector2(232, 664)
+metadata/type = "bin"
 
 [node name="Bin6" parent="Bins" unique_id=1866781940 instance=ExtResource("3_l37oo")]
 position = Vector2(288, 664)
+metadata/type = "bin"
 
 [node name="Bin7" parent="Bins" unique_id=1976804661 instance=ExtResource("3_l37oo")]
 position = Vector2(344, 664)
+metadata/type = "bin"
