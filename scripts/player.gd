@@ -56,6 +56,12 @@ func _physics_process(delta: float) -> void:
 		if velocity.length() < REST_THRESHOLD:
 			velocity = Vector2.ZERO
 			launched = false
+			print("in threshold")
+			print("collision: ", collision.get_collider().name)
+			if collision.get_collider().has_meta("type") and collision.get_collider().get_meta("type") == "bin":
+				print("in bin")
+				var other = collision.get_collider()
+				other._on_hit()
 		
 		if collision.get_collider().has_meta("type") and collision.get_collider().get_meta("type") == "collider":
 			var other = collision.get_collider()

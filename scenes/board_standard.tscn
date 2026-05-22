@@ -51,7 +51,7 @@ position = Vector2(400, 0)
 rotation = -1.5707964
 
 [node name="BoundaryFloor" parent="Centering Offset/Boundaries" unique_id=2014993203 instance=ExtResource("2_1al85")]
-position = Vector2(0, 720)
+position = Vector2(0, 722)
 
 [node name="BoundaryCeling" parent="Centering Offset/Boundaries" unique_id=1715390714 instance=ExtResource("2_1al85")]
 rotation = 3.1415927
@@ -69,6 +69,7 @@ position = Vector2(120, 664)
 
 [node name="Bin4" parent="Centering Offset/Bins" unique_id=1018867408 instance=ExtResource("3_u37pi")]
 position = Vector2(176, 664)
+point_value = 50
 
 [node name="Bin5" parent="Centering Offset/Bins" unique_id=1020897747 instance=ExtResource("3_u37pi")]
 position = Vector2(232, 664)
