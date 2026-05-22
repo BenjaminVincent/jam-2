@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bk5ce40uxjem1"]
+
+[ext_resource type="PackedScene" uid="uid://b4dcuxgl37rcj" path="res://scenes/board_standard.tscn" id="1_ra442"]
+[ext_resource type="PackedScene" uid="uid://bvac1o2r7jw50" path="res://scenes/basic_collider.tscn" id="2_fiq81"]
+[ext_resource type="PackedScene" uid="uid://brpabx6vkfywx" path="res://scenes/bin.tscn" id="3_l37oo"]
+
+[node name="LevelDefault" type="Node2D" unique_id=2139533695]
+
+[node name="BoardStandard" parent="." unique_id=1585537679 instance=ExtResource("1_ra442")]
+
+[node name="Colliders" type="Node2D" parent="." unique_id=420592813]
+
+[node name="BasicCollider" parent="Colliders" unique_id=74425848 instance=ExtResource("2_fiq81")]
+position = Vector2(552, 296)
+
+[node name="BasicCollider2" parent="Colliders" unique_id=12069392 instance=ExtResource("2_fiq81")]
+position = Vector2(736, 480)
+
+[node name="BasicCollider3" parent="Colliders" unique_id=1958208681 instance=ExtResource("2_fiq81")]
+position = Vector2(536, 536)
+
+[node name="BasicCollider4" parent="Colliders" unique_id=516804681 instance=ExtResource("2_fiq81")]
+position = Vector2(736, 168)
+
+[node name="BasicCollider5" parent="Colliders" unique_id=1516709907 instance=ExtResource("2_fiq81")]
+position = Vector2(576, 152)
+
+[node name="BasicCollider6" parent="Colliders" unique_id=1340964859 instance=ExtResource("2_fiq81")]
+position = Vector2(688, 312)
+
+[node name="Bins" type="Node2D" parent="." unique_id=204016713]
+position = Vector2(441, 0)
+
+[node name="Bin1" parent="Bins" unique_id=2021428844 instance=ExtResource("3_l37oo")]
+position = Vector2(8, 664)
+point_value = 10
+
+[node name="Bin2" parent="Bins" unique_id=1961651438 instance=ExtResource("3_l37oo")]
+position = Vector2(64, 664)
+point_value = 20
+
+[node name="Bin3" parent="Bins" unique_id=1577844568 instance=ExtResource("3_l37oo")]
+position = Vector2(120, 664)
+
+[node name="Bin4" parent="Bins" unique_id=460633273 instance=ExtResource("3_l37oo")]
+position = Vector2(176, 664)
+point_value = 100
+
+[node name="Bin5" parent="Bins" unique_id=948565940 instance=ExtResource("3_l37oo")]
+position = Vector2(232, 664)
+
+[node name="Bin6" parent="Bins" unique_id=1866781940 instance=ExtResource("3_l37oo")]
+position = Vector2(288, 664)
+
+[node name="Bin7" parent="Bins" unique_id=1976804661 instance=ExtResource("3_l37oo")]
+position = Vector2(344, 664)

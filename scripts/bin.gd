@@ -4,6 +4,7 @@ extends StaticBody2D
 @export var point_value: int = 5
 
 
+
 func _ready() -> void:
 	set_meta("type", "bin")
 	score_label.text = str(point_value)

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b4dcuxgl37rcj" path="res://scenes/board_standard.tscn" id="1_h23n6"]
 [ext_resource type="PackedScene" uid="uid://bvac1o2r7jw50" path="res://scenes/basic_collider.tscn" id="2_uwxec"]
+[ext_resource type="PackedScene" uid="uid://brpabx6vkfywx" path="res://scenes/bin.tscn" id="3_0ljxa"]
 
 [node name="Level3" type="Node2D" unique_id=438883644]
 
@@ -83,3 +84,30 @@ position = Vector2(729, 280)
 
 [node name="BasicCollider5" parent="Colliders" unique_id=675222959 instance=ExtResource("2_uwxec")]
 position = Vector2(576, 160)
+
+[node name="Bins" type="Node2D" parent="." unique_id=1685029883]
+position = Vector2(441, 0)
+
+[node name="Bin1" parent="Bins" unique_id=2021428844 instance=ExtResource("3_0ljxa")]
+position = Vector2(8, 664)
+point_value = 10
+
+[node name="Bin2" parent="Bins" unique_id=1438238995 instance=ExtResource("3_0ljxa")]
+position = Vector2(64, 664)
+point_value = 20
+
+[node name="Bin3" parent="Bins" unique_id=2117436517 instance=ExtResource("3_0ljxa")]
+position = Vector2(120, 664)
+
+[node name="Bin4" parent="Bins" unique_id=523617355 instance=ExtResource("3_0ljxa")]
+position = Vector2(176, 664)
+point_value = 50
+
+[node name="Bin5" parent="Bins" unique_id=582937755 instance=ExtResource("3_0ljxa")]
+position = Vector2(232, 664)
+
+[node name="Bin6" parent="Bins" unique_id=931883572 instance=ExtResource("3_0ljxa")]
+position = Vector2(288, 664)
+
+[node name="Bin7" parent="Bins" unique_id=716053243 instance=ExtResource("3_0ljxa")]
+position = Vector2(344, 664)

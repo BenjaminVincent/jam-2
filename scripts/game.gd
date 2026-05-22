@@ -39,14 +39,16 @@ func _load_level(_current_level = null) -> void:
 	for child in current_level.get_children():
 		child.queue_free()
 	
-	var level_path = ("res://scenes/level_" + str(_current_level) + ".tscn")
+	var level_path = ("res://scenes/levels/level_" + str(_current_level) + ".tscn")
+	
 	var level
 	if ResourceLoader.exists(level_path):
 		level = load(level_path)
 	else:
-		level = load("res://scenes/level_default.tscn")
+		level = load("res://scenes/levels/level_default.tscn")
 	
 	current_level.add_child(level.instantiate())
+
 
 
 func _on_update_score() -> void:

@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://c17cwqe5mosab" path="res://scenes/vertical_collider.tscn" id="1_ua7c8"]
 [ext_resource type="PackedScene" uid="uid://drelbun12h8vq" path="res://scenes/boundary.tscn" id="2_1al85"]
-[ext_resource type="PackedScene" uid="uid://brpabx6vkfywx" path="res://scenes/bin.tscn" id="3_u37pi"]
 
 [node name="BoardStandard" type="Node2D" unique_id=1585537679]
 
@@ -55,29 +54,3 @@ position = Vector2(0, 722)
 
 [node name="BoundaryCeling" parent="Centering Offset/Boundaries" unique_id=1715390714 instance=ExtResource("2_1al85")]
 rotation = 3.1415927
-
-[node name="Bins" type="Node2D" parent="Centering Offset" unique_id=1239554501]
-
-[node name="Bin1" parent="Centering Offset/Bins" unique_id=472369522 instance=ExtResource("3_u37pi")]
-position = Vector2(8, 664)
-point_value = 10
-
-[node name="Bin2" parent="Centering Offset/Bins" unique_id=494969167 instance=ExtResource("3_u37pi")]
-position = Vector2(64, 664)
-point_value = 20
-
-[node name="Bin3" parent="Centering Offset/Bins" unique_id=1110375768 instance=ExtResource("3_u37pi")]
-position = Vector2(120, 664)
-
-[node name="Bin4" parent="Centering Offset/Bins" unique_id=1018867408 instance=ExtResource("3_u37pi")]
-position = Vector2(176, 664)
-point_value = 50
-
-[node name="Bin5" parent="Centering Offset/Bins" unique_id=1020897747 instance=ExtResource("3_u37pi")]
-position = Vector2(232, 664)
-
-[node name="Bin6" parent="Centering Offset/Bins" unique_id=1853193492 instance=ExtResource("3_u37pi")]
-position = Vector2(288, 664)
-
-[node name="Bin7" parent="Centering Offset/Bins" unique_id=1323839487 instance=ExtResource("3_u37pi")]
-position = Vector2(344, 664)
