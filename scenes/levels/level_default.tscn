@@ -13,23 +13,30 @@ position = Vector2(441, 0)
 [node name="Bin1" parent="Bins" unique_id=2021428844 instance=ExtResource("2_v1elp")]
 position = Vector2(8, 664)
 point_value = 10
+metadata/type = "bin"
 
 [node name="Bin2" parent="Bins" unique_id=1152651474 instance=ExtResource("2_v1elp")]
 position = Vector2(64, 664)
 point_value = 20
+metadata/type = "bin"
 
 [node name="Bin3" parent="Bins" unique_id=995507973 instance=ExtResource("2_v1elp")]
 position = Vector2(120, 664)
+metadata/type = "bin"
 
 [node name="Bin4" parent="Bins" unique_id=2035969734 instance=ExtResource("2_v1elp")]
 position = Vector2(176, 664)
 point_value = 50
+metadata/type = "bin"
 
 [node name="Bin5" parent="Bins" unique_id=1463071755 instance=ExtResource("2_v1elp")]
 position = Vector2(232, 664)
+metadata/type = "bin"
 
 [node name="Bin6" parent="Bins" unique_id=1122925588 instance=ExtResource("2_v1elp")]
 position = Vector2(288, 664)
+metadata/type = "bin"
 
 [node name="Bin7" parent="Bins" unique_id=639824603 instance=ExtResource("2_v1elp")]
 position = Vector2(344, 664)
+metadata/type = "bin"

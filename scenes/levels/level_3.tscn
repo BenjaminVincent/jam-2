@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://gtny2ou4wwfp"]
 
 [ext_resource type="PackedScene" uid="uid://b4dcuxgl37rcj" path="res://scenes/board_standard.tscn" id="1_h23n6"]
-[ext_resource type="PackedScene" uid="uid://bvac1o2r7jw50" path="res://scenes/basic_collider.tscn" id="2_uwxec"]
+[ext_resource type="PackedScene" uid="uid://bvac1o2r7jw50" path="res://scenes/colliders/basic_collider.tscn" id="2_uwxec"]
 [ext_resource type="PackedScene" uid="uid://brpabx6vkfywx" path="res://scenes/bin.tscn" id="3_0ljxa"]
 
 [node name="Level3" type="Node2D" unique_id=438883644]
@@ -91,23 +91,30 @@ position = Vector2(441, 0)
 [node name="Bin1" parent="Bins" unique_id=2021428844 instance=ExtResource("3_0ljxa")]
 position = Vector2(8, 664)
 point_value = 10
+metadata/type = "bin"
 
 [node name="Bin2" parent="Bins" unique_id=1438238995 instance=ExtResource("3_0ljxa")]
 position = Vector2(64, 664)
 point_value = 20
+metadata/type = "bin"
 
 [node name="Bin3" parent="Bins" unique_id=2117436517 instance=ExtResource("3_0ljxa")]
 position = Vector2(120, 664)
+metadata/type = "bin"
 
 [node name="Bin4" parent="Bins" unique_id=523617355 instance=ExtResource("3_0ljxa")]
 position = Vector2(176, 664)
 point_value = 50
+metadata/type = "bin"
 
 [node name="Bin5" parent="Bins" unique_id=582937755 instance=ExtResource("3_0ljxa")]
 position = Vector2(232, 664)
+metadata/type = "bin"
 
 [node name="Bin6" parent="Bins" unique_id=931883572 instance=ExtResource("3_0ljxa")]
 position = Vector2(288, 664)
+metadata/type = "bin"
 
 [node name="Bin7" parent="Bins" unique_id=716053243 instance=ExtResource("3_0ljxa")]
 position = Vector2(344, 664)
+metadata/type = "bin"
