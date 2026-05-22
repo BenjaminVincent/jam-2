@@ -60,9 +60,11 @@ rotation = 3.1415927
 
 [node name="Bin1" parent="Centering Offset/Bins" unique_id=472369522 instance=ExtResource("3_u37pi")]
 position = Vector2(8, 664)
+point_value = 10
 
 [node name="Bin2" parent="Centering Offset/Bins" unique_id=494969167 instance=ExtResource("3_u37pi")]
 position = Vector2(64, 664)
+point_value = 20
 
 [node name="Bin3" parent="Centering Offset/Bins" unique_id=1110375768 instance=ExtResource("3_u37pi")]
 position = Vector2(120, 664)
