@@ -21,7 +21,7 @@ func _process(_delta: float) -> void:
 
 
 func _reset_ball() -> void:
-	var _nothing = global_position # CRITICAL NEVEVER REMOVE THIS OR ENTIRE GAME BREAKS
+	var _nothing = global_position # CRITICAL NEVER REMOVE THIS OR ENTIRE GAME BREAKS
 	freeze = false
 	global_position = initial_position
 	linear_velocity = Vector2.ZERO
