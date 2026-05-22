@@ -72,10 +72,10 @@ position = Vector2(640, 504)
 position = Vector2(704, 540)
 
 [node name="SmallCollider4" parent="Colliders" unique_id=1336425915 instance=ExtResource("3_0qepi")]
-position = Vector2(760, 504)
+position = Vector2(736, 496)
 
 [node name="SmallCollider7" parent="Colliders" unique_id=1603653585 instance=ExtResource("3_0qepi")]
-position = Vector2(800, 540)
+position = Vector2(776, 536)
 
 [node name="SmallCollider10" parent="Colliders" unique_id=780701999 instance=ExtResource("3_0qepi")]
 position = Vector2(774, 576)
@@ -102,10 +102,10 @@ position = Vector2(792, 616)
 position = Vector2(484, 616)
 
 [node name="SmallCollider2" parent="Colliders" unique_id=613566929 instance=ExtResource("3_0qepi")]
-position = Vector2(528, 504)
+position = Vector2(545, 496)
 
 [node name="SmallCollider5" parent="Colliders" unique_id=705882177 instance=ExtResource("3_0qepi")]
-position = Vector2(477, 540)
+position = Vector2(496, 540)
 
 [node name="Bins" type="Node2D" parent="." unique_id=1685029883]
 position = Vector2(441, 0)
