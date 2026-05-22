@@ -108,10 +108,10 @@ position = Vector2(704, 578)
 position = Vector2(768, 578)
 
 [node name="BasicCollider" parent="Colliders" unique_id=1926324726 instance=ExtResource("2_fiq81")]
-position = Vector2(480, 384)
+position = Vector2(496, 384)
 
 [node name="BasicCollider4" parent="Colliders" unique_id=1438047739 instance=ExtResource("2_fiq81")]
-position = Vector2(800, 384)
+position = Vector2(784, 384)
 
 [node name="BasicCollider2" parent="Colliders" unique_id=2087855325 instance=ExtResource("2_fiq81")]
 position = Vector2(672, 384)
