@@ -10,7 +10,7 @@ const START_FRICTION: = 0.70
 const ELASTICITY: float = 0.85
 
 const GRAVITY: Vector2 = Vector2(0.0, 2100.0)
-const REST_THRESHOLD: float = 40.0
+const REST_THRESHOLD: float = 33.5
 
 var launched: bool = false
 var just_launched: bool = false
@@ -53,13 +53,14 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.bounce(collision.get_normal())
 		velocity *= ELASTICITY
 		
-		if velocity.length() < REST_THRESHOLD:
-			velocity = Vector2.ZERO
+		# NOTICE for bin collision and stopping velocity
+		var collider = collision.get_collider()
+		
+		if collider.has_meta("type") and collider.get_meta("type") == "bin" and velocity.length() < REST_THRESHOLD:
 			launched = false
-			
-			if collision.get_collider().has_meta("type") and collision.get_collider().get_meta("type") == "bin":
-				var other = collision.get_collider()
-				other._on_hit()
+			velocity = Vector2.ZERO
+			var other = collision.get_collider()
+			other._on_hit()
 		
 		if collision.get_collider().has_meta("type") and collision.get_collider().get_meta("type") == "collider":
 			var other = collision.get_collider()
