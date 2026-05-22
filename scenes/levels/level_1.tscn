@@ -46,5 +46,317 @@ position = Vector2(344, 664)
 point_value = 10
 metadata/type = "bin"
 
-[node name="SmallCollider" parent="." unique_id=74425848 instance=ExtResource("4_x42e6")]
-position = Vector2(584, 304)
+[node name="Colliders" type="Node2D" parent="." unique_id=979439048]
+
+[node name="Row1" type="Node2D" parent="Colliders" unique_id=1998557752]
+
+[node name="SmallCollider1" parent="Colliders/Row1" unique_id=74425848 instance=ExtResource("4_x42e6")]
+position = Vector2(486, 64)
+
+[node name="SmallCollider2" parent="Colliders/Row1" unique_id=1303972074 instance=ExtResource("4_x42e6")]
+position = Vector2(548, 64)
+
+[node name="SmallCollider3" parent="Colliders/Row1" unique_id=1508731287 instance=ExtResource("4_x42e6")]
+position = Vector2(610, 64)
+
+[node name="SmallCollider4" parent="Colliders/Row1" unique_id=674373863 instance=ExtResource("4_x42e6")]
+position = Vector2(672, 64)
+
+[node name="SmallCollider5" parent="Colliders/Row1" unique_id=390859586 instance=ExtResource("4_x42e6")]
+position = Vector2(734, 64)
+
+[node name="SmallCollider6" parent="Colliders/Row1" unique_id=40649090 instance=ExtResource("4_x42e6")]
+position = Vector2(796, 64)
+
+[node name="Row2" type="Node2D" parent="Colliders" unique_id=2094638742]
+
+[node name="SmallCollider1" parent="Colliders/Row2" unique_id=366382564 instance=ExtResource("4_x42e6")]
+position = Vector2(454, 105)
+
+[node name="SmallCollider2" parent="Colliders/Row2" unique_id=76940440 instance=ExtResource("4_x42e6")]
+position = Vector2(516, 105)
+
+[node name="SmallCollider3" parent="Colliders/Row2" unique_id=1234204353 instance=ExtResource("4_x42e6")]
+position = Vector2(578, 105)
+
+[node name="SmallCollider4" parent="Colliders/Row2" unique_id=1133531501 instance=ExtResource("4_x42e6")]
+position = Vector2(639, 105)
+
+[node name="SmallCollider5" parent="Colliders/Row2" unique_id=171618793 instance=ExtResource("4_x42e6")]
+position = Vector2(702, 105)
+
+[node name="SmallCollider6" parent="Colliders/Row2" unique_id=1364346038 instance=ExtResource("4_x42e6")]
+position = Vector2(764, 105)
+
+[node name="SmallCollider7" parent="Colliders/Row2" unique_id=2142195288 instance=ExtResource("4_x42e6")]
+position = Vector2(826, 105)
+
+[node name="Row3" type="Node2D" parent="Colliders" unique_id=270857755]
+position = Vector2(0, 83)
+
+[node name="SmallCollider1" parent="Colliders/Row3" unique_id=110362603 instance=ExtResource("4_x42e6")]
+position = Vector2(486, 64)
+
+[node name="SmallCollider2" parent="Colliders/Row3" unique_id=442491587 instance=ExtResource("4_x42e6")]
+position = Vector2(548, 64)
+
+[node name="SmallCollider3" parent="Colliders/Row3" unique_id=1581313749 instance=ExtResource("4_x42e6")]
+position = Vector2(610, 64)
+
+[node name="SmallCollider4" parent="Colliders/Row3" unique_id=671761254 instance=ExtResource("4_x42e6")]
+position = Vector2(672, 64)
+
+[node name="SmallCollider5" parent="Colliders/Row3" unique_id=1458746226 instance=ExtResource("4_x42e6")]
+position = Vector2(734, 64)
+
+[node name="SmallCollider6" parent="Colliders/Row3" unique_id=1123385205 instance=ExtResource("4_x42e6")]
+position = Vector2(796, 64)
+
+[node name="Row4" type="Node2D" parent="Colliders" unique_id=756783444]
+position = Vector2(0, 83)
+
+[node name="SmallCollider1" parent="Colliders/Row4" unique_id=1182276654 instance=ExtResource("4_x42e6")]
+position = Vector2(454, 105)
+
+[node name="SmallCollider2" parent="Colliders/Row4" unique_id=1421088658 instance=ExtResource("4_x42e6")]
+position = Vector2(516, 105)
+
+[node name="SmallCollider3" parent="Colliders/Row4" unique_id=1364715186 instance=ExtResource("4_x42e6")]
+position = Vector2(578, 105)
+
+[node name="SmallCollider4" parent="Colliders/Row4" unique_id=2052817584 instance=ExtResource("4_x42e6")]
+position = Vector2(640, 105)
+
+[node name="SmallCollider5" parent="Colliders/Row4" unique_id=435430250 instance=ExtResource("4_x42e6")]
+position = Vector2(702, 105)
+
+[node name="SmallCollider6" parent="Colliders/Row4" unique_id=1282506936 instance=ExtResource("4_x42e6")]
+position = Vector2(764, 105)
+
+[node name="SmallCollider7" parent="Colliders/Row4" unique_id=923515017 instance=ExtResource("4_x42e6")]
+position = Vector2(826, 105)
+
+[node name="Row5" type="Node2D" parent="Colliders" unique_id=498371875]
+position = Vector2(0, 164)
+
+[node name="SmallCollider1" parent="Colliders/Row5" unique_id=1004227374 instance=ExtResource("4_x42e6")]
+position = Vector2(486, 64)
+
+[node name="SmallCollider2" parent="Colliders/Row5" unique_id=1970122792 instance=ExtResource("4_x42e6")]
+position = Vector2(548, 64)
+
+[node name="SmallCollider3" parent="Colliders/Row5" unique_id=355398085 instance=ExtResource("4_x42e6")]
+position = Vector2(610, 64)
+
+[node name="SmallCollider4" parent="Colliders/Row5" unique_id=522634100 instance=ExtResource("4_x42e6")]
+position = Vector2(672, 64)
+
+[node name="SmallCollider5" parent="Colliders/Row5" unique_id=827065693 instance=ExtResource("4_x42e6")]
+position = Vector2(734, 64)
+
+[node name="SmallCollider6" parent="Colliders/Row5" unique_id=20432774 instance=ExtResource("4_x42e6")]
+position = Vector2(796, 64)
+
+[node name="Row6" type="Node2D" parent="Colliders" unique_id=1577782040]
+position = Vector2(0, 164)
+
+[node name="SmallCollider1" parent="Colliders/Row6" unique_id=961579317 instance=ExtResource("4_x42e6")]
+position = Vector2(454, 105)
+
+[node name="SmallCollider2" parent="Colliders/Row6" unique_id=1711050423 instance=ExtResource("4_x42e6")]
+position = Vector2(516, 105)
+
+[node name="SmallCollider3" parent="Colliders/Row6" unique_id=1470528748 instance=ExtResource("4_x42e6")]
+position = Vector2(578, 105)
+
+[node name="SmallCollider4" parent="Colliders/Row6" unique_id=1934607515 instance=ExtResource("4_x42e6")]
+position = Vector2(640, 105)
+
+[node name="SmallCollider5" parent="Colliders/Row6" unique_id=1371537276 instance=ExtResource("4_x42e6")]
+position = Vector2(702, 105)
+
+[node name="SmallCollider6" parent="Colliders/Row6" unique_id=1695104457 instance=ExtResource("4_x42e6")]
+position = Vector2(764, 105)
+
+[node name="SmallCollider7" parent="Colliders/Row6" unique_id=1815764255 instance=ExtResource("4_x42e6")]
+position = Vector2(826, 105)
+
+[node name="Row7" type="Node2D" parent="Colliders" unique_id=1531207411]
+position = Vector2(0, 247)
+
+[node name="SmallCollider1" parent="Colliders/Row7" unique_id=700016403 instance=ExtResource("4_x42e6")]
+position = Vector2(486, 64)
+
+[node name="SmallCollider2" parent="Colliders/Row7" unique_id=1130714223 instance=ExtResource("4_x42e6")]
+position = Vector2(548, 64)
+
+[node name="SmallCollider3" parent="Colliders/Row7" unique_id=1519667014 instance=ExtResource("4_x42e6")]
+position = Vector2(610, 64)
+
+[node name="SmallCollider4" parent="Colliders/Row7" unique_id=1221145261 instance=ExtResource("4_x42e6")]
+position = Vector2(672, 64)
+
+[node name="SmallCollider5" parent="Colliders/Row7" unique_id=1270444006 instance=ExtResource("4_x42e6")]
+position = Vector2(734, 64)
+
+[node name="SmallCollider6" parent="Colliders/Row7" unique_id=735364299 instance=ExtResource("4_x42e6")]
+position = Vector2(796, 64)
+
+[node name="Row8" type="Node2D" parent="Colliders" unique_id=748060520]
+position = Vector2(0, 247)
+
+[node name="SmallCollider1" parent="Colliders/Row8" unique_id=675413223 instance=ExtResource("4_x42e6")]
+position = Vector2(454, 105)
+
+[node name="SmallCollider2" parent="Colliders/Row8" unique_id=903449674 instance=ExtResource("4_x42e6")]
+position = Vector2(516, 105)
+
+[node name="SmallCollider3" parent="Colliders/Row8" unique_id=411863273 instance=ExtResource("4_x42e6")]
+position = Vector2(578, 105)
+
+[node name="SmallCollider4" parent="Colliders/Row8" unique_id=710782500 instance=ExtResource("4_x42e6")]
+position = Vector2(640, 105)
+
+[node name="SmallCollider5" parent="Colliders/Row8" unique_id=1084566657 instance=ExtResource("4_x42e6")]
+position = Vector2(702, 105)
+
+[node name="SmallCollider6" parent="Colliders/Row8" unique_id=1555040184 instance=ExtResource("4_x42e6")]
+position = Vector2(764, 105)
+
+[node name="SmallCollider7" parent="Colliders/Row8" unique_id=146917598 instance=ExtResource("4_x42e6")]
+position = Vector2(826, 105)
+
+[node name="Row9" type="Node2D" parent="Colliders" unique_id=76448821]
+position = Vector2(0, 326)
+
+[node name="SmallCollider1" parent="Colliders/Row9" unique_id=1000965174 instance=ExtResource("4_x42e6")]
+position = Vector2(486, 64)
+
+[node name="SmallCollider2" parent="Colliders/Row9" unique_id=1669175827 instance=ExtResource("4_x42e6")]
+position = Vector2(548, 64)
+
+[node name="SmallCollider3" parent="Colliders/Row9" unique_id=1202410266 instance=ExtResource("4_x42e6")]
+position = Vector2(610, 64)
+
+[node name="SmallCollider4" parent="Colliders/Row9" unique_id=1991134790 instance=ExtResource("4_x42e6")]
+position = Vector2(672, 64)
+
+[node name="SmallCollider5" parent="Colliders/Row9" unique_id=494002945 instance=ExtResource("4_x42e6")]
+position = Vector2(734, 64)
+
+[node name="SmallCollider6" parent="Colliders/Row9" unique_id=1519024736 instance=ExtResource("4_x42e6")]
+position = Vector2(796, 64)
+
+[node name="Row10" type="Node2D" parent="Colliders" unique_id=1159905162]
+position = Vector2(0, 326)
+
+[node name="SmallCollider1" parent="Colliders/Row10" unique_id=1844823275 instance=ExtResource("4_x42e6")]
+position = Vector2(454, 105)
+
+[node name="SmallCollider2" parent="Colliders/Row10" unique_id=1980110708 instance=ExtResource("4_x42e6")]
+position = Vector2(516, 105)
+
+[node name="SmallCollider3" parent="Colliders/Row10" unique_id=1350838717 instance=ExtResource("4_x42e6")]
+position = Vector2(578, 105)
+
+[node name="SmallCollider4" parent="Colliders/Row10" unique_id=88068508 instance=ExtResource("4_x42e6")]
+position = Vector2(640, 105)
+
+[node name="SmallCollider5" parent="Colliders/Row10" unique_id=676741700 instance=ExtResource("4_x42e6")]
+position = Vector2(702, 105)
+
+[node name="SmallCollider6" parent="Colliders/Row10" unique_id=2012181854 instance=ExtResource("4_x42e6")]
+position = Vector2(764, 105)
+
+[node name="SmallCollider7" parent="Colliders/Row10" unique_id=208674756 instance=ExtResource("4_x42e6")]
+position = Vector2(826, 105)
+
+[node name="Row11" type="Node2D" parent="Colliders" unique_id=1527177124]
+position = Vector2(0, 409)
+
+[node name="SmallCollider1" parent="Colliders/Row11" unique_id=178121266 instance=ExtResource("4_x42e6")]
+position = Vector2(486, 64)
+
+[node name="SmallCollider2" parent="Colliders/Row11" unique_id=176877474 instance=ExtResource("4_x42e6")]
+position = Vector2(548, 64)
+
+[node name="SmallCollider3" parent="Colliders/Row11" unique_id=2092231650 instance=ExtResource("4_x42e6")]
+position = Vector2(610, 64)
+
+[node name="SmallCollider4" parent="Colliders/Row11" unique_id=646848495 instance=ExtResource("4_x42e6")]
+position = Vector2(672, 64)
+
+[node name="SmallCollider5" parent="Colliders/Row11" unique_id=1481435949 instance=ExtResource("4_x42e6")]
+position = Vector2(734, 64)
+
+[node name="SmallCollider6" parent="Colliders/Row11" unique_id=622925013 instance=ExtResource("4_x42e6")]
+position = Vector2(796, 64)
+
+[node name="Row12" type="Node2D" parent="Colliders" unique_id=2116817190]
+position = Vector2(0, 409)
+
+[node name="SmallCollider1" parent="Colliders/Row12" unique_id=933914964 instance=ExtResource("4_x42e6")]
+position = Vector2(454, 105)
+
+[node name="SmallCollider2" parent="Colliders/Row12" unique_id=732689692 instance=ExtResource("4_x42e6")]
+position = Vector2(516, 105)
+
+[node name="SmallCollider3" parent="Colliders/Row12" unique_id=627827064 instance=ExtResource("4_x42e6")]
+position = Vector2(578, 105)
+
+[node name="SmallCollider4" parent="Colliders/Row12" unique_id=1111715631 instance=ExtResource("4_x42e6")]
+position = Vector2(640, 105)
+
+[node name="SmallCollider5" parent="Colliders/Row12" unique_id=1583009907 instance=ExtResource("4_x42e6")]
+position = Vector2(702, 105)
+
+[node name="SmallCollider6" parent="Colliders/Row12" unique_id=1218903694 instance=ExtResource("4_x42e6")]
+position = Vector2(764, 105)
+
+[node name="SmallCollider7" parent="Colliders/Row12" unique_id=1092518761 instance=ExtResource("4_x42e6")]
+position = Vector2(826, 105)
+
+[node name="Row13" type="Node2D" parent="Colliders" unique_id=157382735]
+position = Vector2(0, 489)
+
+[node name="SmallCollider1" parent="Colliders/Row13" unique_id=1580755161 instance=ExtResource("4_x42e6")]
+position = Vector2(486, 64)
+
+[node name="SmallCollider2" parent="Colliders/Row13" unique_id=1074225725 instance=ExtResource("4_x42e6")]
+position = Vector2(548, 64)
+
+[node name="SmallCollider3" parent="Colliders/Row13" unique_id=2098786268 instance=ExtResource("4_x42e6")]
+position = Vector2(610, 64)
+
+[node name="SmallCollider4" parent="Colliders/Row13" unique_id=390394787 instance=ExtResource("4_x42e6")]
+position = Vector2(672, 64)
+
+[node name="SmallCollider5" parent="Colliders/Row13" unique_id=1870022813 instance=ExtResource("4_x42e6")]
+position = Vector2(734, 64)
+
+[node name="SmallCollider6" parent="Colliders/Row13" unique_id=2098684011 instance=ExtResource("4_x42e6")]
+position = Vector2(796, 64)
+
+[node name="Row14" type="Node2D" parent="Colliders" unique_id=822978342]
+position = Vector2(0, 489)
+
+[node name="SmallCollider1" parent="Colliders/Row14" unique_id=433915648 instance=ExtResource("4_x42e6")]
+position = Vector2(454, 105)
+
+[node name="SmallCollider2" parent="Colliders/Row14" unique_id=849792664 instance=ExtResource("4_x42e6")]
+position = Vector2(516, 105)
+
+[node name="SmallCollider3" parent="Colliders/Row14" unique_id=1286554117 instance=ExtResource("4_x42e6")]
+position = Vector2(578, 105)
+
+[node name="SmallCollider4" parent="Colliders/Row14" unique_id=1953024893 instance=ExtResource("4_x42e6")]
+position = Vector2(640, 105)
+
+[node name="SmallCollider5" parent="Colliders/Row14" unique_id=1272638159 instance=ExtResource("4_x42e6")]
+position = Vector2(702, 105)
+
+[node name="SmallCollider6" parent="Colliders/Row14" unique_id=2139984166 instance=ExtResource("4_x42e6")]
+position = Vector2(764, 105)
+
+[node name="SmallCollider7" parent="Colliders/Row14" unique_id=1585062068 instance=ExtResource("4_x42e6")]
+position = Vector2(826, 105)
