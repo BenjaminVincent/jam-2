@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://brpabx6vkfywx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13hj8"]
+size = Vector2(48, 56)
+
+[node name="Bin" type="Area2D" unique_id=472369522]
+
+[node name="DebugTexture" type="ColorRect" parent="." unique_id=1624745263]
+visible = false
+offset_right = 48.0
+offset_bottom = 56.0
+color = Color(0.98039216, 0, 0, 0.68235296)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=687636862]
+position = Vector2(24, 28)
+shape = SubResource("RectangleShape2D_13hj8")
