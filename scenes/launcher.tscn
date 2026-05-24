@@ -6,6 +6,7 @@
 
 [node name="Launcher" type="CharacterBody2D" unique_id=515818187]
 script = ExtResource("1_ut831")
+automatic = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=888647591]
 shape = SubResource("RectangleShape2D_gnkvn")

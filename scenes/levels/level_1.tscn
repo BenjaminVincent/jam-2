@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://btit8xdx0v4hp" path="res://scripts/level_data.gd" id="1_x42e6"]
 [ext_resource type="PackedScene" uid="uid://brpabx6vkfywx" path="res://scenes/bin.tscn" id="2_nsrm0"]
 [ext_resource type="PackedScene" uid="uid://birvtlrxouch4" path="res://scenes/colliders/small_collider.tscn" id="4_x42e6"]
+[ext_resource type="Script" uid="uid://doucbla0n2wl2" path="res://scripts/bouncy_collider.gd" id="5_6761a"]
 
 [node name="Level1" type="Node2D" unique_id=2139533695]
 script = ExtResource("1_x42e6")
@@ -52,6 +53,7 @@ position = Vector2(548, 64)
 
 [node name="SmallCollider3" parent="Colliders/Row1" unique_id=1508731287 instance=ExtResource("4_x42e6")]
 position = Vector2(610, 64)
+script = ExtResource("5_6761a")
 
 [node name="SmallCollider4" parent="Colliders/Row1" unique_id=674373863 instance=ExtResource("4_x42e6")]
 position = Vector2(672, 64)
@@ -74,7 +76,8 @@ position = Vector2(516, 105)
 position = Vector2(578, 105)
 
 [node name="SmallCollider4" parent="Colliders/Row2" unique_id=1133531501 instance=ExtResource("4_x42e6")]
-position = Vector2(639, 105)
+position = Vector2(640, 105)
+script = ExtResource("5_6761a")
 
 [node name="SmallCollider5" parent="Colliders/Row2" unique_id=171618793 instance=ExtResource("4_x42e6")]
 position = Vector2(702, 105)

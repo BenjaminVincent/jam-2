@@ -3,6 +3,8 @@ extends RigidBody2D
 var initial_position: Vector2
 var current_bin: StaticBody2D
 var stop_threshold: float = 0.05
+var bounciness: float = 10 #NOTICE this should be defined in a collider and emmited to ball
+
 
 @onready var game = get_node("/root/Game")
 
@@ -16,18 +18,27 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("RESET_GAME"):
 		GameState._reset_game()
-		pass
 		
 	if Input.is_action_just_pressed("LAUNCH"):
 		freeze = false
 
 
+func bounce() -> void:
+	apply_central_impulse(linear_velocity * bounciness)
+
+
 
 func _on_body_entered(body: Node) -> void:
-	if body.has_meta("type") and body.get_meta("type") == "collider":
-		body._on_hit()
-	if body.has_meta("type") and body.get_meta("type") == "bin":
-		current_bin = body
+	if body.has_meta("type"):
+		if body.get_meta("type") == "collider":
+			body._on_hit()
+			
+		if body.get_meta("type") == "bouncy":
+			body._on_hit()
+			bounce()
+		
+		if body.get_meta("type") == "bin":
+			current_bin = body
 
 
 
