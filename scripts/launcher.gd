@@ -5,15 +5,22 @@ const ROTATION_SPEED = 1.5
 const ANGLE_LIMIT = 60
 const LAUNCH_SPEED = 15
 
+var direction = 1
+
+@export var automatic: bool = true
 
 
 func _physics_process(_delta: float) -> void:
-	
-	var direction := Input.get_axis("ui_left", "ui_right")
-	rotation += -direction * ROTATION_SPEED * _delta
-	
 	var _min = deg_to_rad(-ANGLE_LIMIT)
 	var _max = deg_to_rad(ANGLE_LIMIT)
+	
+	if automatic:
+		if rotation <= _min or rotation >= _max:
+			direction *= -1
+	else:
+		direction = -Input.get_axis("ui_left", "ui_right")
+	
+	rotation += direction * ROTATION_SPEED * _delta
 	rotation = clamp(rotation, _min, _max)
 	
 	
