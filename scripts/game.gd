@@ -7,11 +7,11 @@ extends Node2D
 
 
 func _ready() -> void:
-	_load_level(1)
 	GameState.update_score.connect(_on_update_score)
 	GameState.update_ball_count.connect(_on_update_ball_count)
 	GameState.update_required_level_score.connect(_on_update_required_level_score)
 	GameState.load_next_level.connect(_on_load_next_level)
+	_load_level(1)
 
 
 func _process(_delta: float) -> void:

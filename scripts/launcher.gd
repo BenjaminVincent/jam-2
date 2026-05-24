@@ -1,28 +1,30 @@
 extends CharacterBody2D
 
 
-const ROTATION_SPEED = 1.5
+const ROTATION_SPEED_TEST = 1.5
 const ANGLE_LIMIT = 60
 const LAUNCH_SPEED = 15
 
 var direction = 1
+var rotation_speed_auto = ROTATION_SPEED_TEST
+var _min = deg_to_rad(-ANGLE_LIMIT)
+var _max = deg_to_rad(ANGLE_LIMIT)
 
 @export var automatic: bool = true
 
 
 func _physics_process(_delta: float) -> void:
-	var _min = deg_to_rad(-ANGLE_LIMIT)
-	var _max = deg_to_rad(ANGLE_LIMIT)
-	
 	if automatic:
 		if rotation <= _min or rotation >= _max:
 			direction *= -1
+			
+		rotation += direction * rotation_speed_auto * _delta
+		
 	else:
 		direction = -Input.get_axis("ui_left", "ui_right")
+		rotation += direction * ROTATION_SPEED_TEST * _delta
 	
-	rotation += direction * ROTATION_SPEED * _delta
 	rotation = clamp(rotation, _min, _max)
-	
 	
 	move_and_slide()
 
@@ -30,6 +32,8 @@ func _physics_process(_delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("LAUNCH"):
+		if GameState.score >= GameState.required_level_score: return
+		
 		var active_ball = _check_active_ball()
 		
 		if active_ball: return
@@ -40,14 +44,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		var game = get_node("/root/Game")
 		var ball = load("res://scenes/ball.tscn").instantiate()
-		var direction = Vector2.DOWN.rotated(global_rotation)
+		var angle = Vector2.DOWN.rotated(global_rotation)
 		
-		direction = Vector2(rad_to_deg(direction.x), rad_to_deg(direction.y))
+		angle = Vector2(rad_to_deg(angle.x), rad_to_deg(angle.y))
 		
 		ball.global_position = global_position
 		game.add_child(ball)
 		
-		ball.linear_velocity = direction * LAUNCH_SPEED
+		ball.linear_velocity = angle * LAUNCH_SPEED
 
 
 
