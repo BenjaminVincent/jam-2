@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://brpabx6vkfywx"]
 
 [ext_resource type="Script" uid="uid://o7mnhm0y044j" path="res://scripts/bin.gd" id="1_yq3hu"]
+[ext_resource type="AudioStream" uid="uid://bvogb1jbef3g6" path="res://audio/bin_score_sound.mp3" id="2_688sc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13hj8"]
 size = Vector2(48, 0)
@@ -26,3 +27,6 @@ text = "5"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BinScoreSound" type="AudioStreamPlayer" parent="." unique_id=992946100]
+stream = ExtResource("2_688sc")
