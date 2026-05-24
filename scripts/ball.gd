@@ -36,4 +36,4 @@ func _on_sleeping_state_changed() -> void:
 		current_bin._on_hit()
 		current_bin = null
 		queue_free()
-	  
+	 
