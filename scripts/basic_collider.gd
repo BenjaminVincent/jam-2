@@ -2,10 +2,10 @@ extends StaticBody2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@export var point_value: int = 0
 
 var hit_texture = load("res://assets/peg_hit.png")
 var base_texture = load("res://assets/peg.png")
-var point_value: int = 1
 
 
 
