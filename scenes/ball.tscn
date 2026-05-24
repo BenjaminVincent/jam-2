@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://81jepktn8q38" path="res://assets/ball.png" id="1_7s4qf"]
 [ext_resource type="Script" uid="uid://bh858xkttl5bg" path="res://scripts/ball.gd" id="1_cxlvu"]
+[ext_resource type="PackedScene" uid="uid://dfm634khuokch" path="res://particles/trail_particle.tscn" id="3_f7cbr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7s4qf"]
 bounce = 0.8
@@ -15,6 +16,8 @@ physics_material_override = SubResource("PhysicsMaterial_7s4qf")
 contact_monitor = true
 max_contacts_reported = 5
 script = ExtResource("1_cxlvu")
+
+[node name="TrailParticle" parent="." unique_id=1684518193 instance=ExtResource("3_f7cbr")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=122299904]
 texture = ExtResource("1_7s4qf")
