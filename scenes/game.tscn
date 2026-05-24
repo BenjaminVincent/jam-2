@@ -24,16 +24,19 @@ theme_override_constants/separation = 14
 [node name="Button1" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1314412720]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+focus_mode = 0
 text = "Level 1"
 
 [node name="Button2" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1428143920]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+focus_mode = 0
 text = "Level 2"
 
 [node name="Button3" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=444388085]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+focus_mode = 0
 text = "Level 3"
 
 [node name="Score" type="RichTextLabel" parent="CanvasLayer" unique_id=201811042]
@@ -49,6 +52,22 @@ text = "SCORE: 0"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 2
+
+[node name="Remaining" type="RichTextLabel" parent="CanvasLayer" unique_id=360872319]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -480.0
+offset_top = 80.0
+offset_right = -8.0
+offset_bottom = 168.0
+grow_horizontal = 0
+theme_override_font_sizes/normal_font_size = 64
+text = "REMAINING: 0"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Launcher" parent="." unique_id=515818187 instance=ExtResource("3_lbhrr")]
 position = Vector2(640, -8)

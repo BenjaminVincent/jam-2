@@ -6,6 +6,7 @@ const ANGLE_LIMIT = 60
 const LAUNCH_SPEED = 15
 
 
+
 func _physics_process(_delta: float) -> void:
 	
 	var direction := Input.get_axis("ui_left", "ui_right")
@@ -26,12 +27,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		if active_ball: return
 		
+		if GameState.remaining_balls <= 0: return
+		
+		GameState.set_remaining_balls(GameState.remaining_balls - 1)
+		
 		var game = get_node("/root/Game")
 		var ball = load("res://scenes/ball.tscn").instantiate()
 		var direction = Vector2.DOWN.rotated(global_rotation)
-		direction = Vector2(rad_to_deg(direction.x), rad_to_deg(direction.y))
 		
-		print("direction ", direction)
+		direction = Vector2(rad_to_deg(direction.x), rad_to_deg(direction.y))
 		
 		ball.global_position = global_position
 		game.add_child(ball)

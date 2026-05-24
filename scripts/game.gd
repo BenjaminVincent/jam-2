@@ -1,6 +1,14 @@
 extends Node2D
 @onready var current_level: Node2D = $CurrentLevel
 @onready var score: RichTextLabel = $CanvasLayer/Score
+@onready var remaining: RichTextLabel = $CanvasLayer/Remaining
+
+
+
+func _ready() -> void:
+	_load_level()
+	GameState.update_score.connect(_on_update_score)
+	GameState.update_ball_count.connect(_on_update_ball_count)
 
 
 
@@ -11,11 +19,6 @@ func _process(_delta: float) -> void:
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
-
-
-func _ready() -> void:
-	_load_level()
-	GameState.update_score.connect(_on_update_score)
 
 
 
@@ -40,8 +43,8 @@ func _load_level(_current_level = null) -> void:
 		child.queue_free()
 	
 	var level_path = ("res://scenes/levels/level_" + str(_current_level) + ".tscn")
-	
 	var level
+	
 	if ResourceLoader.exists(level_path):
 		level = load(level_path)
 	else:
@@ -53,3 +56,9 @@ func _load_level(_current_level = null) -> void:
 
 func _on_update_score() -> void:
 	score.text = "SCORE: " + str(GameState.score)
+
+
+
+func _on_update_ball_count() -> void:
+	remaining.text = "REMAINING: " + str(GameState.remaining_balls)
+	

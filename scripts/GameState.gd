@@ -2,14 +2,22 @@ extends Node
 
 var current_level: int = 1
 var score: int = 0
+var remaining_balls: int = 0
 
 signal update_score
+signal update_ball_count
 
 
 
 func add_to_score(points) -> void:
 	score += points
 	emit_signal("update_score")
+
+
+
+func set_remaining_balls(count) -> void:
+	remaining_balls = count
+	emit_signal("update_ball_count")
 
 
 
