@@ -15,14 +15,15 @@ func add_to_score(points) -> void:
 
 func _reset_game() -> void:
 	
-	var ball = get_node_or_null("/root/Game/Ball")
+	GameState.score = 0
 	
-	if ball:
-		ball._reset_ball()
-		GameState.score = 0
-		emit_signal("update_score")
-	else:
-		push_error("Player was not found, unable to reset game")
+	emit_signal("update_score")
+	
+	var game = get_node_or_null("/root/Game/")
+	
+	for object in game.get_children():
+		if object.has_meta("type") and object.get_meta("type") == "ball":
+			object.queue_free()
 
 
 

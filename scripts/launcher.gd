@@ -18,8 +18,13 @@ func _physics_process(_delta: float) -> void:
 	
 	move_and_slide()
 
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("LAUNCH"):
+		var active_ball = _check_active_ball()
+		
+		if active_ball: return
 		
 		var game = get_node("/root/Game")
 		var ball = load("res://scenes/ball.tscn").instantiate()
@@ -32,4 +37,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		game.add_child(ball)
 		
 		ball.linear_velocity = direction * LAUNCH_SPEED
-		
+
+
+
+func _check_active_ball() -> bool:
+	var game = get_node_or_null("/root/Game/")
+	for object in game.get_children():
+		if object.has_meta("type") and object.get_meta("type") == "ball":
+			return true
+	return false

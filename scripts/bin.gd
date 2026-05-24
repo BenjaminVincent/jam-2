@@ -25,3 +25,4 @@ func _update_label() -> void:
 
 func _on_hit() -> void:
 	GameState.add_to_score(point_value)
+	print("adding points!")
