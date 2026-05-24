@@ -11,7 +11,7 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(6.738305e-07, 0.40701604, 0.40718302, 1)
 
-[node name="CurrentLevel" type="Node2D" parent="." unique_id=1676688763]
+[node name="CurrentLevelContainer" type="Node2D" parent="." unique_id=1676688763]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=48710871]
 

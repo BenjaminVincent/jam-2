@@ -1,16 +1,17 @@
 extends Node2D
-@onready var current_level: Node2D = $CurrentLevel
+
+@onready var current_level_container: Node2D = $CurrentLevelContainer
 @onready var score: RichTextLabel = $CanvasLayer/Score
 @onready var remaining: RichTextLabel = $CanvasLayer/Remaining
 @onready var required_level_score: RichTextLabel = $CanvasLayer/RequiredLevelScore
 
 
-
 func _ready() -> void:
-	_load_level()
+	_load_level(1)
 	GameState.update_score.connect(_on_update_score)
 	GameState.update_ball_count.connect(_on_update_ball_count)
 	GameState.update_required_level_score.connect(_on_update_required_level_score)
+	GameState.load_next_level.connect(_on_load_next_level)
 
 
 func _process(_delta: float) -> void:
@@ -26,22 +27,22 @@ func _process(_delta: float) -> void:
 func _on_button_pressed(source: BaseButton) -> void:
 	
 	if "1" in source.name:
-		GameState.current_level = 1
+		GameState.current_level_DEBUG = 1
 	elif "2" in source.name:
-		GameState.current_level = 2
+		GameState.current_level_DEBUG = 2
 	elif "3" in source.name:
-		GameState.current_level = 3
+		GameState.current_level_DEBUG = 3
 	else:
 		print("level not found")
-	
-	_load_level(GameState.current_level)
+	GameState.current_level = GameState.current_level_DEBUG
+	_load_level(GameState.current_level_DEBUG)
 
 
 
 func _load_level(_current_level = null) -> void:
-	
-	for child in current_level.get_children():
-		child.queue_free()
+	print("TOP OF _load_level: ", _current_level)
+	for child in current_level_container.get_children():
+		if child: child.queue_free()
 	
 	var level_path = ("res://scenes/levels/level_" + str(_current_level) + ".tscn")
 	var level
@@ -49,9 +50,10 @@ func _load_level(_current_level = null) -> void:
 	if ResourceLoader.exists(level_path):
 		level = load(level_path)
 	else:
+		print("LOADING DEFAULT LEVEL")
 		level = load("res://scenes/levels/level_default.tscn")
 	
-	current_level.add_child(level.instantiate())
+	current_level_container.add_child(level.instantiate())
 
 
 
@@ -62,6 +64,17 @@ func _on_update_score() -> void:
 
 func _on_update_ball_count() -> void:
 	remaining.text = "REMAINING: " + str(GameState.remaining_balls)
-	
+
+
+
 func _on_update_required_level_score() -> void:
 	required_level_score.text = "REQUIRED: " + str(GameState.required_level_score)
+
+
+
+func _on_load_next_level() -> void: 
+	print("current_level: ", GameState.current_level)
+	await get_tree().create_timer(3).timeout
+	await get_tree().process_frame
+	GameState._reset_game()
+	_load_level(GameState.current_level)
