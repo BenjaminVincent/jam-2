@@ -32,6 +32,8 @@ func _on_button_pressed(source: BaseButton) -> void:
 		GameState.current_level_DEBUG = 2
 	elif "3" in source.name:
 		GameState.current_level_DEBUG = 3
+	elif "4" in source.name:
+		GameState.current_level_DEBUG = 4
 	else:
 		print("level not found")
 	GameState.current_level = GameState.current_level_DEBUG
