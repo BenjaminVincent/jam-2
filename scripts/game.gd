@@ -2,6 +2,7 @@ extends Node2D
 @onready var current_level: Node2D = $CurrentLevel
 @onready var score: RichTextLabel = $CanvasLayer/Score
 @onready var remaining: RichTextLabel = $CanvasLayer/Remaining
+@onready var required_level_score: RichTextLabel = $CanvasLayer/RequiredLevelScore
 
 
 
@@ -9,7 +10,7 @@ func _ready() -> void:
 	_load_level()
 	GameState.update_score.connect(_on_update_score)
 	GameState.update_ball_count.connect(_on_update_ball_count)
-
+	GameState.update_required_level_score.connect(_on_update_required_level_score)
 
 
 func _process(_delta: float) -> void:
@@ -62,3 +63,5 @@ func _on_update_score() -> void:
 func _on_update_ball_count() -> void:
 	remaining.text = "REMAINING: " + str(GameState.remaining_balls)
 	
+func _on_update_required_level_score() -> void:
+	required_level_score.text = "REQUIRED: " + str(GameState.required_level_score)
