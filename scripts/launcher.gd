@@ -3,8 +3,9 @@ extends CharacterBody2D
 
 const ROTATION_SPEED_TEST = 1.5
 const ANGLE_LIMIT = 60
-const LAUNCH_SPEED = 15
+const STRENGTH = 10
 
+var strength = 10
 var direction = 1
 var rotation_speed_auto = ROTATION_SPEED_TEST
 var _min = deg_to_rad(-ANGLE_LIMIT)
@@ -16,6 +17,7 @@ var _max = deg_to_rad(ANGLE_LIMIT)
 
 func _ready() -> void:
 	GameState.update_launcher_speed.connect(_on_update_launcher_speed)
+	GameState.update_launcher_strength.connect(_on_update_launcher_strength)
 
 
 
@@ -57,7 +59,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		ball.global_position = global_position
 		game.add_child(ball)
 		
-		ball.linear_velocity = angle * LAUNCH_SPEED
+		ball.linear_velocity = angle * strength
 
 
 
@@ -71,3 +73,7 @@ func _check_active_ball() -> bool:
 
 func _on_update_launcher_speed() -> void:
 	rotation_speed_auto = GameState.launcher_speed
+
+
+func _on_update_launcher_strength() -> void:
+	strength = GameState.launcher_strength
