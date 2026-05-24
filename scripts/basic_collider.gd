@@ -22,7 +22,7 @@ func _on_hit() -> void:
 	
 	if point_value > 0:
 		var display_number = load("res://scenes/display_number.tscn").instantiate()
-		display_number.text = str(point_value)
+		display_number.get_node("RichTextLabel").text = str(point_value)
 		add_child(display_number)
 		tween_number(display_number)
 	
