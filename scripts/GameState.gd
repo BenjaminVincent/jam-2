@@ -9,12 +9,14 @@ var max_level: int = 4
 var launcher_speed: float = 1.5
 var launcher_strength: int = 10
 
+var on_going = false
+
 signal update_score
 signal update_ball_count
 signal update_required_level_score
 signal update_launcher_speed
 signal update_launcher_strength
-signal load_next_level
+#signal load_next_level
 
 
 func add_to_score(_score) -> void:
@@ -22,9 +24,20 @@ func add_to_score(_score) -> void:
 	emit_signal("update_score")
 	
 	if score >= required_level_score and current_level <= max_level:
+		var game = get_node("/root/Game")
 		print("YOU HAVE COMPLETED LEVEL: ", current_level)
 		current_level += 1
-		emit_signal("load_next_level")
+		#emit_signal("load_next_level")
+		game._on_load_next_level()
+		
+		return
+	elif remaining_balls <= 0 and not on_going:
+		var game = get_node("/root/Game")
+		print("FAIL STATE ACTIVE")
+		current_level = 1
+		#emit_signal("load_next_level")
+		game._on_load_next_level()
+		return
 
 
 

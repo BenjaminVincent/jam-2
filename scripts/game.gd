@@ -10,7 +10,7 @@ func _ready() -> void:
 	GameState.update_score.connect(_on_update_score)
 	GameState.update_ball_count.connect(_on_update_ball_count)
 	GameState.update_required_level_score.connect(_on_update_required_level_score)
-	GameState.load_next_level.connect(_on_load_next_level)
+	#GameState.load_next_level.connect(_on_load_next_level)
 	_load_level(1)
 
 
@@ -56,7 +56,9 @@ func _load_level(_current_level = null) -> void:
 		level = load("res://scenes/levels/level_default.tscn")
 	
 	current_level_container.add_child(level.instantiate())
-
+	
+	GameState.on_going = true
+	print("_load_level GameState.on_going: ", GameState.on_going)
 
 
 func _on_update_score() -> void:
@@ -80,3 +82,4 @@ func _on_load_next_level() -> void:
 	await get_tree().process_frame
 	GameState._reset_game()
 	_load_level(GameState.current_level)
+	

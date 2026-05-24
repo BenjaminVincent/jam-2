@@ -25,5 +25,7 @@ func _update_label() -> void:
 
 
 func _on_hit() -> void:
+
+	GameState.on_going = false
 	GameState.add_to_score(point_value)
 	bin_score_sound.play()
