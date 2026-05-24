@@ -20,7 +20,7 @@ position = Vector2(512, 192)
 position = Vector2(576, 192)
 
 [node name="SmallCollider3" parent="Colliders" unique_id=296670915 instance=ExtResource("4_l37oo")]
-position = Vector2(640, 192)
+position = Vector2(639, 192)
 
 [node name="SmallCollider4" parent="Colliders" unique_id=503757829 instance=ExtResource("4_l37oo")]
 position = Vector2(704, 192)
