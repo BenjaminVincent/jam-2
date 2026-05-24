@@ -6,10 +6,12 @@ var score: int = 0
 var remaining_balls: int = 0
 var required_level_score: int = 0
 var max_level: int = 3
+var launcher_speed: float = 1.5
 
 signal update_score
 signal update_ball_count
 signal update_required_level_score
+signal update_launcher_speed
 signal load_next_level
 
 
@@ -34,6 +36,10 @@ func set_required_level_score(_score) -> void:
 	required_level_score = _score
 	emit_signal("update_required_level_score")
 
+
+func set_launcher_speed(_speed) -> void:
+	launcher_speed = _speed
+	emit_signal("update_launcher_speed")
 
 
 func _reset_game() -> void:

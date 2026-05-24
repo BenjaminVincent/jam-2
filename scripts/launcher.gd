@@ -13,6 +13,12 @@ var _max = deg_to_rad(ANGLE_LIMIT)
 @export var automatic: bool = true
 
 
+
+func _ready() -> void:
+	GameState.update_launcher_speed.connect(_on_update_launcher_speed)
+
+
+
 func _physics_process(_delta: float) -> void:
 	if automatic:
 		if rotation <= _min or rotation >= _max:
@@ -61,3 +67,7 @@ func _check_active_ball() -> bool:
 		if object.has_meta("type") and object.get_meta("type") == "ball":
 			return true
 	return false
+
+
+func _on_update_launcher_speed() -> void:
+	rotation_speed_auto = GameState.launcher_speed
