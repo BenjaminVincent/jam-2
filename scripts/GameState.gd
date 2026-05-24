@@ -5,7 +5,7 @@ var current_level_DEBUG: int = 1
 var score: int = 0
 var remaining_balls: int = 0
 var required_level_score: int = 0
-var max_level: int = 3
+var max_level: int = 4
 var launcher_speed: float = 1.5
 var launcher_strength: int = 10
 
