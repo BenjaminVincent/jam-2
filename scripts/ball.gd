@@ -2,6 +2,7 @@ extends RigidBody2D
 
 var initial_position: Vector2
 var current_bin: StaticBody2D
+var stop_threshold: float = 0.05
 
 @onready var game = get_node("/root/Game")
 
