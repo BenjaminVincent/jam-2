@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dfm634khuokch"]
+
+[ext_resource type="Texture2D" uid="uid://81jepktn8q38" path="res://assets/ball.png" id="1_u7jer"]
+
+[sub_resource type="Curve" id="Curve_lbldx"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_rkcnb"]
+curve = SubResource("Curve_lbldx")
+
+[sub_resource type="Curve" id="Curve_u7jer"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_lbldx"]
+curve = SubResource("Curve_u7jer")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yj8j1"]
+particle_flag_disable_z = true
+scale_curve = SubResource("CurveTexture_lbldx")
+color = Color(1, 1, 1, 0.043137256)
+hue_variation_curve = SubResource("CurveTexture_rkcnb")
+
+[node name="TrailParticle" type="Node2D" unique_id=1684518193]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1287187833]
+amount = 10
+texture = ExtResource("1_u7jer")
+lifetime = 0.5
+randomness = 0.32
+process_material = SubResource("ParticleProcessMaterial_yj8j1")
