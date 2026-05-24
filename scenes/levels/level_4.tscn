@@ -10,6 +10,7 @@
 script = ExtResource("1_anwe6")
 ball_limit = 4
 required_score = 150
+launcher_strength = 25
 
 [node name="BoardStandard" parent="." unique_id=1585537679 instance=ExtResource("1_ogj6a")]
 
@@ -109,9 +110,12 @@ position = Vector2(484, 616)
 
 [node name="BasicCollider" parent="Colliders" unique_id=200048807 instance=ExtResource("3_rej77")]
 position = Vector2(596, 288)
+point_value = 50
 
 [node name="BasicCollider2" parent="Colliders" unique_id=679063885 instance=ExtResource("3_rej77")]
 position = Vector2(673, 288)
+point_value = 50
 
 [node name="BasicCollider3" parent="Colliders" unique_id=56752643 instance=ExtResource("3_rej77")]
 position = Vector2(632, 360)
+point_value = 50
