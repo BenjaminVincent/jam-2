@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://tn3kiusr7fbq"]
+
+[ext_resource type="Script" uid="uid://bjcnlbi6p4h47" path="res://scripts/point_number.gd" id="1_l8qv2"]
+
+[node name="DisplayNumber" type="Node2D" unique_id=96918950]
+script = ExtResource("1_l8qv2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1325539130]
+offset_left = -31.0
+offset_top = -32.0
+offset_right = 33.0
+offset_bottom = 32.0
+pivot_offset = Vector2(31, 32)
+theme_override_font_sizes/normal_font_size = 16
+text = "5"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -27,6 +27,11 @@ window/size/initial_position_type=0
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 
+[gui]
+
+common/snap_controls_to_pixels=false
+theme/default_font_multichannel_signed_distance_field=true
+
 [input]
 
 FULLSCREEN={
