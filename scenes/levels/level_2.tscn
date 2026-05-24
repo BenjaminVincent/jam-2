@@ -9,7 +9,6 @@
 [node name="Level2" type="Node2D" unique_id=2139533695]
 script = ExtResource("1_l37oo")
 ball_limit = 14
-required_score = 5
 
 [node name="BoardStandard" parent="." unique_id=1585537679 instance=ExtResource("1_ra442")]
 
@@ -113,15 +112,27 @@ position = Vector2(768, 578)
 
 [node name="BasicCollider" parent="Colliders" unique_id=1926324726 instance=ExtResource("2_fiq81")]
 position = Vector2(496, 384)
+point_value = 5
 
 [node name="BasicCollider4" parent="Colliders" unique_id=1438047739 instance=ExtResource("2_fiq81")]
 position = Vector2(784, 384)
+point_value = 5
+
+[node name="BasicCollider5" parent="Colliders" unique_id=1841330960 instance=ExtResource("2_fiq81")]
+position = Vector2(576, 136)
+point_value = 5
+
+[node name="BasicCollider6" parent="Colliders" unique_id=1514170684 instance=ExtResource("2_fiq81")]
+position = Vector2(704, 136)
+point_value = 5
 
 [node name="BasicCollider2" parent="Colliders" unique_id=2087855325 instance=ExtResource("2_fiq81")]
 position = Vector2(672, 384)
+point_value = 5
 
 [node name="BasicCollider3" parent="Colliders" unique_id=1324569942 instance=ExtResource("2_fiq81")]
 position = Vector2(600, 384)
+point_value = 5
 
 [node name="Bins" type="Node2D" parent="." unique_id=204016713]
 position = Vector2(441, 0)
