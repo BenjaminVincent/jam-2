@@ -7,6 +7,7 @@ extends StaticBody2D
 		_update_label()
 
 @onready var score_label: RichTextLabel = $ScoreLabel
+@onready var bin_score_sound: AudioStreamPlayer = $BinScoreSound
 
 
 
@@ -25,4 +26,4 @@ func _update_label() -> void:
 
 func _on_hit() -> void:
 	GameState.add_to_score(point_value)
-	print("adding points!")
+	bin_score_sound.play()
