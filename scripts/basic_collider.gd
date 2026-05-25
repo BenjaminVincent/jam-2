@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var sprite_2d: Sprite2D
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 @export var point_value: int = 0
@@ -13,6 +13,10 @@ var base_texture = load("res://assets/peg.png")
 
 func _ready() -> void:
 	set_meta("type", "collider")
+	
+	if has_node("Sprite2D"):
+		sprite_2d = $Sprite2D
+
 
 
 func get_bounciness() -> float:
@@ -30,11 +34,11 @@ func _on_hit() -> void:
 		add_child(display_number)
 		tween_number(display_number)
 	
-	
-	sprite_2d.texture = hit_texture
-	await get_tree().create_timer(0.3).timeout
-	await get_tree().process_frame
-	sprite_2d.texture = base_texture
+	if has_node("Sprite2D"):
+		sprite_2d.texture = hit_texture
+		await get_tree().create_timer(0.3).timeout
+		await get_tree().process_frame
+		sprite_2d.texture = base_texture
 
 
 func tween_number(node) -> void:
